@@ -1,0 +1,101 @@
+.clickable {
+    cursor: pointer;
+}
+
+.closed {
+    display: none;
+    
+}
+
+body {
+    padding-left:.6em;
+}
+
+
+
+
+
+
+/*elephant graveyard*/
+/*
+head, body, h1,h2,h3,h4,h5,p {
+    margin: 0px;
+    margin-left: 0px;
+    padding: 0px;
+}
+h1 {
+    font-size: 2em;
+    padding-left:.6em;
+}
+.info h2 {
+    color: #00AF54;
+}
+h2 {
+    color: #00AF54;
+    padding-bottom: .2em;
+    padding-left:.8em;
+    
+}
+.info  a {
+    color:#8E8C89;
+    font-size: .9em;
+    padding-left: 1.2em;
+    padding-bottom: 0;
+}
+#github {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0em;
+    padding-left: 1.6em;
+    font-size:1em;
+}
+#link {
+    font-size: 1.2em;
+    color: #6F937A;
+}
+.info h3 {
+    color:#8E8C89;
+    margin-left: 8px;
+}
+.skills {
+    padding-left:.6em;
+}
+.skills h2 {
+    padding-bottom: .2em;
+}
+
+.skills h3 {
+    margin-left: 1em;
+}
+.skills h5 {
+    color:#8E8C89;  
+    padding-left: 1.3em; 
+    font-size: 1em; 
+}
+.work {
+    padding-left: .6em;
+}
+.work h3 {
+    padding-left: 1em;
+}
+.work h4 {
+    color:#8E8C89;
+    padding-left: 1.3em;
+}
+.education {
+    padding: .6em;
+}
+.education h3 {
+    padding-left:1em;
+}
+.education h4 {
+    color:#8E8C89;
+    padding-left: 1.3em;
+}
+.awards {
+    padding: .6em;
+}
+.awards h3 {
+    padding-left: 1em;
+}
+*/
