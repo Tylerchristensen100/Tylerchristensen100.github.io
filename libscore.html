@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Library Score</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <form class="form" action="libscore.html" method="GET">
+                <label>Library ranking</label>
+                <div class="form-group">
+                    <label for="">Library 1</label>
+                    <input id="input1" class="text" type="text" name="lib1" minlength="3"><br><br>
+                    <label for="">Library 2</label>
+                    <input id="input2" class="" type="text" name="lib2" minlength="3"><br><br>
+                    <div id="append">
+                        
+                    </div>
+                </div>
+                <button id="new" class="btn" type="button">New Library</button>
+                <input id="submit" class="btn btn-primary" type="submit" >
+            </form>
+            <!-- <h5>Library 1</h5> -->
+            <h6 id="library1"></h6>
+            <!-- <h5>library 2</h5> -->
+            <h6 id="library2"></h6>
+            
+        </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(ready());
+                var appended = 2;
+                
+                var input;
+                var input1;
+                var input2;
+                function ready() {
+                    
+                    $('#new').click(newLibrary);
+                    $('#submit').click(Input);
+                }
+                function Input() {
+                    //console.log(window.location.href);
+                    input = window.location.href;
+                    input= input.split('=',6);
+                    
+                   // console.log(input);
+                    input1 = input[1];
+                    input2 = input[2];
+                    //console.log(input2);
+                    input1 = input1.split('&',5);
+                    input2 = input2.split('&',5);
+
+                    input1 = input1[0];
+                    input2 = input2[0];
+                    var inputs = String;
+                    inputs = input1;
+                    console.log(input1);
+                    //console.log(input2);
+                    submit();
+                }
+                var link = "jquery";
+                function newLibrary() {
+                appended = appended + 1;
+                if (appended < 6) {
+                    $("#append").append('<label>Library ' +appended +' </label>')
+                     $("#append").append("<input type='text' name='lib" + appended + "'><br><br>")
+                     console.log("appended");
+                     event.preventDefault();
+                }
+                else {
+                    $("#append").append("<h4>Maximum limit reached</h4>");
+                }
+                
+                }
+
+                /*$.getJSON('https://api.npms.io/v2/package/' + $.trim(input1), function (library1Data) {
+                library1 = library1Data;
+                console.log(library1);//.x.score.final*/
+                var library1;
+                var lib1Orig;
+                var lib1;
+                function submit() {
+                    console.log("about to ajax" + input1);
+                    $.getJSON('https://api.npms.io/v2/package/jquery', function (library1Data) {
+                    console.log(input1);
+                    library1 = library1Data;
+                    console.log("ajaxed");
+                    //library = JSON.stringify(library1);
+                    lib1Orig = library1.score.final;
+                    lib1 = String(lib1Orig);
+                    lib1 = lib1.substring(2,4);
+                    //lib1 = (lib1Orig);
+                    console.log('library 1 is: ' + lib1Orig)
+                    console.log(lib1 + '%');
+                    displayInput();
+                    });
+                }
+                //var lib1;
+                function displayInput() {
+                    console.log("display input called");
+                   $('#library1').html(lib1 + '%');
+                   alert(lib1 + "%");
+                   //$("#library1").appendTo('<h4>' + lib1 + '%' + '</h4>')
+                   event.preventDefault();
+                //   $('#library2').html(library2.score.final);
+                }
+            </script>
+    </body>
+</html>
