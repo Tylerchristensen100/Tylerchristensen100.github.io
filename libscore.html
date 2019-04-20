@@ -83,19 +83,33 @@
                 var lib1;
                 function submit() {
                     console.log("about to ajax" + input1);
-                    $.getJSON('https://api.npms.io/v2/package/jquery', function (library1Data) {
-                    console.log(input1);
-                    library1 = library1Data;
-                    console.log("ajaxed");
-                    //library = JSON.stringify(library1);
-                    lib1Orig = library1.score.final;
-                    lib1 = String(lib1Orig);
-                    lib1 = lib1.substring(2,4);
-                    //lib1 = (lib1Orig);
-                    console.log('library 1 is: ' + lib1Orig)
-                    console.log(lib1 + '%');
-                    displayInput();
+                    $.get("https://api.npms.io/v2/package/jquery").done(function (data) {
+                    console.log(data.score.final);
                     });
+
+                    //$.getJSON('https://api.npms.io/v2/package/jquery', function (library1Data) {
+                        $.ajax({
+                            type: 'GET',
+                            url: 'https://api.npms.io/v2/package/jquery',
+                            contentType: 'json',
+                            success: function(library1Data) {
+                            console.log(input1);
+                            library1 = library1Data;
+                            console.log("ajaxed");
+                            //library = JSON.stringify(library1);
+                            lib1Orig = library1.score.final;
+                            lib1 = String(lib1Orig);
+                            lib1 = lib1.substring(2,4);
+                            //lib1 = (lib1Orig);
+                            console.log('library 1 is: ' + lib1Orig)
+                            console.log(lib1 + '%');
+                            displayInput();
+                            },
+                            error: function() {
+                                alert("Unable to ajax");
+                            }
+                        })
+                        
                 }
                 //var lib1;
                 function displayInput() {
