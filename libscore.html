@@ -65,9 +65,9 @@
                 var input5;
                 var lib1;
                 var lib2;
-                var lib3;
-                var lib4;
-                var lib5;
+                var lib3 = '';
+                var lib4 = '';
+                var lib5 = '';
                 
 
                 function ready() {
@@ -83,14 +83,15 @@
                
                      function newLibrary() {
                         ++appended;
-                     if (appended <= 5) { $("#append").append('<label>Library ' +appended + ' '+' </label>')
-                         $("#append").append("<input type='text' name='lib" + appended + "'><br><br>")
-                         $("#lib" + appended + "Label").html('Library ' + appended);
+                     if (appended <= 5) { 
+                         $('#append').append('<label>Library ' + appended + ' '+' </label>');
+                         $('#append').append("<input type='text' name='lib" + appended + "'><br><br>");
+                         $('#lib' + appended + 'Label').html('Library ' + appended);
                          event.preventDefault();
                          }
                          else {
                          if (appended == 6) {
-                         $("#append").append("<h4>Maximum limit reached</h4>");
+                         $('#append').append('<h4>Maximum limit reached</h4>');
                          }
                          }
                     
@@ -114,11 +115,27 @@
                     input2 = input2[0];
                     submit1();
                     submit2();
+
+                     input3 = input[3];
+                     input3 = input3.split('&',5);
+                     input3 = input3[0];
+
+                     input4 = input[4];
+                     input4 = input4.split('&',5);
+                     input4 = input4[0];
+
+                     input5 = input[5];
+                     input5 = input5.split('&',5);
+                     input5 = input5[0];
+                     
+                     submit3();
+                     submit4();
+                     submit5();
                     
-                    if (appended == 3) {
+                   /* if (appended == 3) {
                         console.log('3 run');
                         input3 = input[3];
-                        input3 = input3.split('&',5);
+                        input3 = input3.split('&',5); 
                         input3 = input3[0];
                         submit3();
                     }
@@ -148,7 +165,7 @@
                         submit3();
                         submit4();
                         submit5();
-                    }
+                    }*/
                     
                 }
                 
@@ -177,7 +194,7 @@
                         displayInput();
                     },
                     error: function(xhr, status) {
-                        console.log("error");
+                        console.log('error');
                     }
                     });
                 }
@@ -201,7 +218,7 @@
                             displayInput();
                         },
                         error: function(xhr, status) {
-                            console.log("error");
+                            console.log('error');
                         }
                         });
                 }
@@ -221,12 +238,11 @@
                 lib3Orig = library3.score.final;
                 lib3 = String(lib3Orig);
                 lib3 = lib3.substring(2,4);
-                console.log("ajaxed 3")
                 //lib1 = (lib1Orig);
                 displayInput();
                 },
                 error: function(xhr, status) {
-                console.log("error");
+                console.log('error');
                 }
                 });
                 }
@@ -249,7 +265,7 @@
                 displayInput();
                 },
                 error: function(xhr, status) {
-                console.log("error");
+                console.log('error');
                 }
                 });
                 }
@@ -274,7 +290,7 @@
                 displayInput();
                 },
                 error: function(xhr, status) {
-                console.log("error");
+                console.log('error');
                 }
                 });
                 }
@@ -285,7 +301,14 @@
                     $('#library1').html(lib1 + '%');
                     $('#lib2Label').html(input2);
                     $('#library2').html(lib2 + '%');
-                    if (typeof lib3 === 'string' || lib3 instanceof String) {
+
+                    $('#lib3Label').html(input3);
+                    $('#library3').html(lib3 + '%');
+                    $('#lib4Label').html(input4);
+                    $('#library4').html(lib4 + '%');
+                    $('#lib5Label').html(input5);
+                    $('#library5').html(lib5 + '%');
+                   /* if (typeof lib3 === 'string' || lib3 instanceof String) {
                         console.log('3displayed');
                         $('#lib3Label').html(input3);
                         $('#library3').html(lib3 + '%');
@@ -297,7 +320,7 @@
                     else if (typeof lib5 === 'string' || lib5 instanceof String) {
                         $('#lib5Label').html(input5);
                          $('#library5').html(lib5 + '%');
-                    }
+                    }*/
                    event.preventDefault();
                 }
             </script>
