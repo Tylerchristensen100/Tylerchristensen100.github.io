@@ -7,8 +7,10 @@
     </head>
     <body>
         <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
             <form class="form" action="libscore.html" method="GET">
-                <label>Library ranking</label>
+                <label class="h1">Library ranking</label>
                 <div class="form-group">
                     <label for="">Library 1</label>
                     <input id="input1" class="text" type="text" name="lib1" minlength="3"><br><br>
@@ -19,106 +21,284 @@
                     </div>
                 </div>
                 <button id="new" class="btn" type="button">New Library</button>
-                <input id="submit" class="btn btn-primary" type="submit" >
+                <input id="submit" class="btn btn-primary" type="submit">
             </form>
-            <!-- <h5>Library 1</h5> -->
-            <h6 id="library1"></h6>
-            <!-- <h5>library 2</h5> -->
-            <h6 id="library2"></h6>
+            </div>
+            
+                <div class="col-lg-2">
+                    <h4 id="lib1Label">Library 1</h4>
+                    <p id="library1"></p>
+                </div>
+            
+            <div class="col-lg-2">
+                <h4 id="lib2Label">Library 2</h4>
+                <p id="library2"></p>
+            </div>
+            <div class="col-lg-2">
+                <h4 id="lib3Label"></h4>
+                <p id="library3"></p>
+            </div>
+            <div class="col-lg-2">
+                <h4 id="lib4Label"></h4>
+                <p id="library4"></p>
+            </div>
+            <div class="col-lg-1">
+                <h4 id="lib5Label"></h4>
+                <p id="library5"></p>
+            </div>
+        </div>
+
             
         </div>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
             <script>
-                $(document).ready(ready());
+                $(document).ready(ready);
+
                 var appended = 2;
-                
+                var url = 'https://api.npms.io/v2/package/';
                 var input;
                 var input1;
                 var input2;
+                var input3;
+                var input4;
+                var input5;
+                var lib1;
+                var lib2;
+                var lib3;
+                var lib4;
+                var lib5;
+                
+
                 function ready() {
-                    
                     $('#new').click(newLibrary);
-                    $('#submit').click(Input);
+                   try {
+                    $('.form').submit(setTimeout(Input(), 200));
+                   }
+                   catch {
+                        console.log('Fail');
+                        
+                   }
                 }
+               
+                     function newLibrary() {
+                        ++appended;
+                     if (appended <= 5) { $("#append").append('<label>Library ' +appended + ' '+' </label>')
+                         $("#append").append("<input type='text' name='lib" + appended + "'><br><br>")
+                         $("#lib" + appended + "Label").html('Library ' + appended);
+                         event.preventDefault();
+                         }
+                         else {
+                         if (appended == 6) {
+                         $("#append").append("<h4>Maximum limit reached</h4>");
+                         }
+                         }
+                    
+                    }
+                         
                 function Input() {
-                    //console.log(window.location.href);
+                    console.log(appended);
+                   //takes query strings
                     input = window.location.href;
                     input= input.split('=',6);
                     
-                   // console.log(input);
+                   // takes them out of the original array
                     input1 = input[1];
                     input2 = input[2];
-                    //console.log(input2);
+                    //splits them up at the & too
                     input1 = input1.split('&',5);
                     input2 = input2.split('&',5);
 
+                    //Specifies what part of the array the value is in
                     input1 = input1[0];
                     input2 = input2[0];
-                    var inputs = String;
-                    inputs = input1;
-                    console.log(input1);
-                    //console.log(input2);
-                    submit();
-                }
-                var link = "jquery";
-                function newLibrary() {
-                appended = appended + 1;
-                if (appended < 6) {
-                    $("#append").append('<label>Library ' +appended +' </label>')
-                     $("#append").append("<input type='text' name='lib" + appended + "'><br><br>")
-                     console.log("appended");
-                     event.preventDefault();
-                }
-                else {
-                    $("#append").append("<h4>Maximum limit reached</h4>");
+                    submit1();
+                    submit2();
+                    
+                    if (appended == 3) {
+                        console.log('3 run');
+                        input3 = input[3];
+                        input3 = input3.split('&',5);
+                        input3 = input3[0];
+                        submit3();
+                    }
+                    else if (appended == 4) {
+                        console.log('4 run');
+                        input3 = input[3];
+                        input3 = input3.split('&',5);
+                        input3 = input3[0];
+
+                        input4 = input[4];
+                        input4 = input4.split('&',5);
+                        input4 = input4[0];
+                        submit3();
+                        submit4();
+                    }
+                    else if (appended == 5) {
+                        console.log('5 run');
+                        input3 = input[3];
+                        input3 = input3.split('&',5);
+                        input3 = input3[0];
+                        input4 = input[4];
+                        input4 = input4.split('&',5);
+                        input4 = input4[0];
+                        input5 = input[5];
+                        input5 = input5.split('&',5);
+                        input5 = input5[0];
+                        submit3();
+                        submit4();
+                        submit5();
+                    }
+                    
                 }
                 
-                }
+               
 
-                /*$.getJSON('https://api.npms.io/v2/package/' + $.trim(input1), function (library1Data) {
-                library1 = library1Data;
-                console.log(library1);//.x.score.final*/
-                var library1;
-                var lib1Orig;
-                var lib1;
-                function submit() {
-                    console.log("about to ajax" + input1);
-                    $.get("https://api.npms.io/v2/package/jquery").done(function (data) {
-                    console.log(data.score.final);
+               
+                
+               
+            
+
+                function submit1() {
+                    var library1;
+                    var lib1Orig;
+                    $.ajax({
+                    url: url + input1,
+                    type: 'GET',
+                    async: false,
+                    crossDomain: true,
+                    dataType: 'json',
+                    success: function(library1Data) {
+                        library1 = library1Data;
+                        //library = JSON.stringify(library1);
+                        lib1Orig = library1.score.final;
+                        lib1 = String(lib1Orig);
+                        lib1 = lib1.substring(2,4);
+                        displayInput();
+                    },
+                    error: function(xhr, status) {
+                        console.log("error");
+                    }
                     });
-
-                    //$.getJSON('https://api.npms.io/v2/package/jquery', function (library1Data) {
-                        $.ajax({
-                            type: 'GET',
-                            url: 'https://api.npms.io/v2/package/jquery',
-                            contentType: 'json',
-                            success: function(library1Data) {
-                            console.log(input1);
-                            library1 = library1Data;
-                            console.log("ajaxed");
-                            //library = JSON.stringify(library1);
-                            lib1Orig = library1.score.final;
-                            lib1 = String(lib1Orig);
-                            lib1 = lib1.substring(2,4);
-                            //lib1 = (lib1Orig);
-                            console.log('library 1 is: ' + lib1Orig)
-                            console.log(lib1 + '%');
-                            displayInput();
-                            },
-                            error: function() {
-                                alert("Unable to ajax");
-                            }
-                        })
-                        
                 }
-                //var lib1;
+                
+                function submit2() {
+                    var library2;
+                    var lib2Orig;
+                   
+                    $.ajax({
+                        url: url + input2,
+                        type: 'GET',
+                        async: false,
+                        crossDomain: true,
+                        dataType: 'json',
+                        success: function(library2Data) {
+                            library2 = library2Data;
+                            //library = JSON.stringify(library1);
+                            lib2Orig = library2.score.final;
+                            lib2 = String(lib2Orig);
+                            lib2 = lib2.substring(2,4);
+                            displayInput();
+                        },
+                        error: function(xhr, status) {
+                            console.log("error");
+                        }
+                        });
+                }
+                function submit3() {
+                var library3;
+                var lib2Orig;
+
+                $.ajax({
+                url: url + input3,
+                type: 'GET',
+                async: false,
+                crossDomain: true,
+                dataType: 'json',
+                success: function(library3Data) {
+                library3 = library3Data;
+                //library = JSON.stringify(library1);
+                lib3Orig = library3.score.final;
+                lib3 = String(lib3Orig);
+                lib3 = lib3.substring(2,4);
+                console.log("ajaxed 3")
+                //lib1 = (lib1Orig);
+                displayInput();
+                },
+                error: function(xhr, status) {
+                console.log("error");
+                }
+                });
+                }
+                
+                function submit4() {
+                var library4;
+                var lib4Orig;
+
+                $.ajax({
+                url: url + input4,
+                type: 'GET',
+                async: false,
+                crossDomain: true,
+                dataType: 'json',
+                success: function(library4Data) {
+                library4 = library4Data;
+                lib4Orig = library4.score.final;
+                lib4 = String(lib4Orig);
+                lib4 = lib4.substring(2,4);
+                displayInput();
+                },
+                error: function(xhr, status) {
+                console.log("error");
+                }
+                });
+                }
+
+                function submit5() {
+                var library5;
+                var lib5Orig;
+
+                $.ajax({
+                url: url + input5,
+                type: 'GET',
+                async: false,
+                crossDomain: true,
+                dataType: 'json',
+                success: function(library5Data) {
+                library5 = library5Data;
+                //library = JSON.stringify(library1);
+                lib5Orig = library5.score.final;
+                lib5 = String(lib5Orig);
+                lib5 = lib5.substring(2,4);
+                //lib1 = (lib1Orig);
+                displayInput();
+                },
+                error: function(xhr, status) {
+                console.log("error");
+                }
+                });
+                }
+
+
                 function displayInput() {
-                    console.log("display input called");
-                   $('#library1').html(lib1 + '%');
-                   alert(lib1 + "%");
-                   //$("#library1").appendTo('<h4>' + lib1 + '%' + '</h4>')
+                    $('#lib1Label').html(input1);
+                    $('#library1').html(lib1 + '%');
+                    $('#lib2Label').html(input2);
+                    $('#library2').html(lib2 + '%');
+                    if (typeof lib3 === 'string' || lib3 instanceof String) {
+                        console.log('3displayed');
+                        $('#lib3Label').html(input3);
+                        $('#library3').html(lib3 + '%');
+                    }
+                    else if (typeof lib4 === 'string' || lib4 instanceof String) {
+                        $('#lib4Label').html(input4);
+                        $('#library4').html(lib4 + '%');
+                    }
+                    else if (typeof lib5 === 'string' || lib5 instanceof String) {
+                        $('#lib5Label').html(input5);
+                         $('#library5').html(lib5 + '%');
+                    }
                    event.preventDefault();
-                //   $('#library2').html(library2.score.final);
                 }
             </script>
     </body>
