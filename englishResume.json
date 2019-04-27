@@ -1,9 +1,8 @@
  {
     "name": "Tyler Christensen",
+    "egg": "&nbsp;",
     "degree": "Computer Science B.S.",
     "contact": {
-        "phone": "Phone",
-        "email": "Email",
         "github": "GitHub"
     },
     "skills": {
@@ -34,9 +33,9 @@
             "experience": "4 Months of experience"
         }
     },
-    "work": {
-        "title": "Arbys Crew",
-        "time": "Aug 2018 - Present"
+    "projects": {
+        "title": "Chesterfield Associates",
+        "time": "Used bootstrap template and managed SFTP"
     },
     "education": {
         "name": "Utah Valley University",

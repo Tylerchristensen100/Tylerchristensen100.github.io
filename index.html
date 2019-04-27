@@ -8,7 +8,7 @@
      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
     <title>Tyler Christensen Resume</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
    <link rel="stylesheet" href="index.css">
    
 
@@ -16,21 +16,20 @@
 
 <body>
    
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="info col-12 col-md-10 col-xl-6 text-success" title="Important information">
-                <h1 id="name"></h1>
+                <h1 id="name"></h1><span id="egg"></span>
                 <h2 id="cs"></h2>
-                <h3 ><a id="tel"  href="tel:8018018011"></a></h3>
-                <h3 ><a id="mail"  href="mailto:utahoutbackmtb@gmail.com"></a></h3>
+                
                 <br>
-                <p id="github"><a id="link" href="https://github.com/Tylerchristensen100"></a></p>
+                <p id="github" class="h4"><a id="link" href="https://github.com/Tylerchristensen100"></a></p>
                 <br>
             </div>
         </div>
 
     <div class="row">
-        <div class="skills col-12 col-md-10 col-xl-6" title="Programming languages and compenency">
+        <div class="skills col-12 col-md-10 col-xl-6 pb-0" title="Programming languages and compenency">
             <h2 id="toggleSkills" class="clickable text-success">Skills</h2>
             <div id="skillsHandler" class="closed text-muted col-xl-8">
                 <h3 id="htmlName">HTML</h3>
@@ -60,21 +59,7 @@
             </div>
         </div>
     </div>
-    
-    <br>
-
-    <div class="row">
-        <div class="work col-12 col-md-10 col-xl-6" title="Where previously worked and position">
-            <h2 id="toggleWork" class="clickable text-success">Work Experience</h3>
-                <div id="workHandler" class="closed text-muted">
-                    <h3 id="position"></h3>
-                    <h4 id="workExperience"></h4>
-                </div>
-            
-        </div>
-    </div>
-     <br>
-    
+    <hr>
     <div class="row">
         <div class="education col-12 col-md-10 col-xl-6" title="Educational achievments and current learning">
             <h2 id="toggleEducation" class="clickable text-success">Education</h2>
@@ -85,21 +70,28 @@
             </div>
         </div>
     </div>
-
+    <hr>
     <div class="row">
-        <div class="awards col-12 col-md-10 col-xl-6" title="Important awards recieved">
-            <h2 id="toggleAwards" class="clickable text-success">Awards</h2>
-            <div id="awardsHandler" class="closed text-muted" >
-                <h3 id="award1"></h3>
-                <h3 id="award2"></h3>
-            </div>
+        <div class="work col-12 col-md-10 col-xl-6" title="Code projects I have done">
+            <h2 id="toggleProjects" class="clickable text-success">Projects</h3>
+                <div id="projectHandler" class="closed text-muted">
+                    <p class="h3"><a id="project1" href="http://Chesterfieldassociates.net"></a></p>
+                    <h4 id="detail1"></h4>
+                </div>
+            
         </div>
     </div>
+     <br>
+    
+    
+
+    
 
 
     </div>   <!-- Container -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="index.js"></script>
+
 </body>
 
 </html>

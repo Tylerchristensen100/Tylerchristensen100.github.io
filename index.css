@@ -11,11 +11,18 @@ body {
     padding-left:.6em;
 }
 
+#egg {
+    padding: 50px;
+    padding-left: 50px;
+}
 
+hr {
+    border-top: 2px solid;
+}
 
-
-
-
+#name {
+    display:inline;
+}
 /*elephant graveyard*/
 /*
 head, body, h1,h2,h3,h4,h5,p {
