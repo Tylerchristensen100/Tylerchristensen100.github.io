@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
 .clickable {
     cursor: pointer;
 }
@@ -9,6 +11,7 @@
 
 body {
     padding-left:.6em;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 #egg {
