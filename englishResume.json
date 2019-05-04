@@ -34,8 +34,10 @@
         }
     },
     "projects": {
-        "title": "Chesterfield Associates",
-        "time": "Used bootstrap template and managed SFTP"
+        "title1": "Chesterfield Associates",
+        "detail1": "Used Bootstrap template and managed SFTP",
+        "title2": "Bootstrap Template",
+        "detail2": "Created my own Bootstrap template"
     },
     "education": {
         "name": "Utah Valley University",

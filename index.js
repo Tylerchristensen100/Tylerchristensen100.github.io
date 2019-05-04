@@ -112,8 +112,10 @@ function Skills() {
 }
 
 function Project() {
-    $('#project1').html(resume.projects.title);
-    $('#detail1').html(resume.projects.time);
+    $('#project1').html(resume.projects.title1);
+    $('#detail1').html(resume.projects.detail1);
+    $('#project2').html(resume.projects.title2);
+    $('#detail2').html(resume.projects.detail2);
 }
 
 function Education() {
