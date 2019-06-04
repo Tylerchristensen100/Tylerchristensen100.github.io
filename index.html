@@ -1,112 +1,93 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115920345-4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Tyler Mission</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-115920345-4');
-    </script>
-
-    <!-- <meta rel="icon" type="image/icon" href="favicon.ico"> -->
-     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-
-    <title>Tyler Christensen Resume</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-   <link rel="stylesheet" href="index.css">
-   
 
 </head>
-
 <body>
-   
-    <div class="container">
-        <div class="row">
-            <div class="info col-12 col-md-10 col-xl-6 text-success" title="Important information">
-                <h1 id="name"></h1><span id="egg"></span>
-                <h2 id="cs"></h2>
-                
-                <br>
-                <p id="github" class="h4"><a id="link" href="https://github.com/Tylerchristensen100"></a></p>
-                <br>
-            </div>
-        </div>
-
+<div class="bs-example">
     <div class="row">
-        <div class="skills col-12 col-md-10 col-xl-6 pb-0" title="Programming languages and compenency">
-            <h2 id="toggleSkills" class="clickable text-success">Skills</h2>
-            <div id="skillsHandler" class="closed text-muted col-xl-8">
-                <h3 id="htmlName">HTML</h3>
-                    <h5 id="htmlDetail"></h5>
-                    <h5 id="htmlExperience"></h5>
-                <br>
+        <div class="col-5"></div>
+        <div class="col-2">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="#bio" class="nav-link active" data-toggle="tab">Bio</a>
+            </li>
+            <li class="nav-item">
+                <a href="#email" class="nav-link" data-toggle="tab">Email</a>
+            </li>
 
-                <h3 id="cssName">CSS</h3>
-                    <h5 id="cssDetail"></h5>
-                    <h5 id="cssExperience"></h5>
-                <br>
-
-                <h3 id="jsName">JavaScript</h3>
-                    <h5 id="jsDetail"></h5>
-                    <h5 id="jsExperience"></h5>
-                <br>
-
-                <h3 id="csName">C#</h3>
-                    <h5 id="csDetail"></h5>
-                    <h5 id="csExperience"></h5>
-                    <h5 id="csKnowledge"></h5>
-                <br>
-
-                <h3 id="cppName">C++</h3>
-                    <h5 id="cppDetail"></h5>
-                    <h5 id="cppExperience"></h5>
-            </div>
+        </ul>
         </div>
+        <div class="col-5"></div>
     </div>
-    <hr>
-    <div class="row">
-        <div class="education col-12 col-md-10 col-xl-6" title="Educational achievments and current learning">
-            <h2 id="toggleEducation" class="clickable text-success">Education</h2>
-            <div id="educationHandler" class="closed text-muted">
-                <h3 id="eduName"></h3>
-                <h4 id="eduGrad"></h4>
-                <h4 id="eduGradDate"></h4>
-            </div>
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="bio">
+            <h4 class="mt-2">Bio tab content</h4>
+            <p>Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui. Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
         </div>
-    </div>
-    <hr>
-    <div class="row">
-        <div class="work col-12 col-md-10 col-xl-6" title="Code projects I have done">
-            <h2 id="toggleProjects" class="clickable text-success">Projects</h3>
-                <div id="projectHandler" class="closed text-muted">
-                    <p class="h3"><a id="project1" href="http://Chesterfieldassociates.net"></a></p>
-                    <h4 id="detail1"></h4>
-                    <p class="h3"><a id="project2" href="Template/index.html"></a></p>
-                    <h4 id="detail2"></h4>
+        <div class="tab-pane" id="email">
+            <h4 class="mt-2">Email tab content</h4>
+            <form action="index.html">
+                <div class="form-group">
+                    <label for="pwd">Name:</label>
+                    <input type="text" class="form-control" id="name">
                 </div>
-            
+                <div class="form-group">
+                    <label for="email">Email address:</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+
         </div>
     </div>
-     <br>
-    
-    
+</div>
 
-    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
-    </div>   <!-- Container -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="index.js"></script>
-
+<?php 
+// Config
+$redirect = "https://tylerchristensen100.github.io"; // Enter your API Callback URL here
+$client_id = "ID: 655418100086-5fnjqbfcp3lu50ifmrio30ar0euf5pab.apps.googleusercontent.com"; // Enter your API Client ID
+$client_secret = "laTOZY11tM4g941iJHPe0WxJ"; // Enter your API Client Secret here
+// Check Code
+if(empty($_GET['code'])) {
+// Authorization Link
+$authorization =
+"https://accounts.google.com/o/oauth2/auth?redirect_uri=$redirect&client_id=$client_id&response_type=code&scope=https://www.googleapis.com/auth/spreadsheets&approval_prompt=force&access_type=offline";
+echo "<h3><a href=\"$authorization\">Authorize &raquo;</a></h3>";
+} else {
+// Authorization
+$code = $_GET['code'];
+// Token
+$url = "https://accounts.google.com/o/oauth2/token";
+$data =
+"code=$code&client_id=$client_id&client_secret=$client_secret&redirect_uri=$redirect&grant_type=authorization_code";
+// Request
+$ch = @curl_init();
+@curl_setopt($ch, CURLOPT_POST, true);
+@curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+@curl_setopt($ch, CURLOPT_URL, $url);
+@curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+'Content-Type: application/x-www-form-urlencoded'
+));
+@curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = @curl_exec($ch);
+$status_code = @curl_getinfo($ch, CURLINFO_HTTP_CODE);
+@curl_close($ch);
+$array = json_decode($response);
+echo "<p>Access Token:<br />".$array->access_token."</p>";
+echo "<p>Refresh Token:<br />".$array->refresh_token."</p>";
+}
+?>
 </body>
-
-</html>
-
+</html>                            
