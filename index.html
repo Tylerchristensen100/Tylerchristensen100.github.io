@@ -33,7 +33,7 @@
         </div>
         <div class="tab-pane" id="email">
             <h4 class="mt-2">Email tab content</h4>
-            <form action="index.html">
+            <form action="index.html" id="form">
                 <div class="form-group">
                     <label for="pwd">Name:</label>
                     <input type="text" class="form-control" id="name">
@@ -42,7 +42,7 @@
                     <label for="email">Email address:</label>
                     <input type="email" class="form-control" id="email">
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" class="btn btn-default" id="submit">Submit</button>
             </form>
 
         </div>
@@ -53,44 +53,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+<script>
+var $form = $('#form'),
+url = 'https://script.google.com/macros/s/AKfycbw87186_Fo2VC1lZK1WEekJCI-sAI66VpgfLYminwRngcm_Mac/exec'
 
-<?php 
-// Config
-$redirect = "https://tylerchristensen100.github.io"; // Enter your API Callback URL here
-$client_id = "ID: 655418100086-5fnjqbfcp3lu50ifmrio30ar0euf5pab.apps.googleusercontent.com"; // Enter your API Client ID
-$client_secret = "laTOZY11tM4g941iJHPe0WxJ"; // Enter your API Client Secret here
-// Check Code
-if(empty($_GET['code'])) {
-// Authorization Link
-$authorization =
-"https://accounts.google.com/o/oauth2/auth?redirect_uri=$redirect&client_id=$client_id&response_type=code&scope=https://www.googleapis.com/auth/spreadsheets&approval_prompt=force&access_type=offline";
-echo "<h3><a
-        href="https://accounts.google.com/o/oauth2/auth?redirect_uri=https://tylerchristensen100.github.io&client_id=655418100086-5fnjqbfcp3lu50ifmrio30ar0euf5pab.apps.googleusercontent.com&response_type=code&scope=https://www.googleapis.com/auth/spreadsheets&approval_prompt=force&access_type=offline"
-        ;
->Authorize &raquo;</a></h3>";
-} else {
-// Authorization
-$code = $_GET['code'];
-// Token
-$url = "https://accounts.google.com/o/oauth2/token";
-$data =
-"code=$code&client_id=$client_id&client_secret=$client_secret&redirect_uri=$redirect&grant_type=authorization_code";
-// Request
-$ch = @curl_init();
-@curl_setopt($ch, CURLOPT_POST, true);
-@curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-@curl_setopt($ch, CURLOPT_URL, $url);
-@curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-'Content-Type: application/x-www-form-urlencoded'
-));
-@curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$response = @curl_exec($ch);
-$status_code = @curl_getinfo($ch, CURLINFO_HTTP_CODE);
-@curl_close($ch);
-$array = json_decode($response);
-echo "<p>Access Token:<br />".$array->access_token."</p>";
-echo "<p>Refresh Token:<br />".$array->refresh_token."</p>";
-}
-?>
+$('#submit').on('click', function(e) {
+e.preventDefault();
+var jqxhr = $.ajax({
+url: url,
+method: "GET",
+dataType: "json",
+data: $form.serializeObject()
+}).success(
+// do something
+);
+})
+</script>
 </body>
 </html>                            
