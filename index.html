@@ -37,15 +37,15 @@
             <form action="index.html" id="form" method="GET">
                 <div class="form-group">
                     <label for="pwd">Name:</label>
-                    <input type="text" class="form-control" id="name" name="name">
+                    <input type="text" class="form-control" id="name" name="name" minlength="5">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email address:</label>
-                    <input type="email" class="form-control" id="email" name="email">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" minlength="6">
                 </div>
-                <button type="submit" class="btn btn-default" id="submit">Submit</button>
+                <button type="submit" class="btn btn-default btn-dark" id="submit">Submit</button>
             </form>
-
+            <h4 id="response"></h4>
         </div>
     </div>
 </div>
@@ -54,60 +54,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="serialize.js"></script>
-<script>
-
-url = 'https://script.google.com/macros/s/AKfycbw87186_Fo2VC1lZK1WEekJCI-sAI66VpgfLYminwRngcm_Mac/exec';
-
-var name;
-var email;
-
-$(document).ready(function() {
-    try {
-        $('#submit').submit(setTimeout(Input(), 200));
-
-        }
-    catch(w) {
-console.log();
-}
-})
-var replaced1;
-var replaced2;
-function Input() {
-    var address = window.location.href;
-    var inputs = address.split('?',6);
-    var input = inputs[1];
-    input = input.split('&', 2);
-    var input1= input[0];
-    var input2 = input[1];
-    input1 = input1.split('=',2)
-    input2 = input2.split('=',2)
-    var inputs1= input1[1];
-    var inputs2= input2[1];
-     replaced1= inputs1.replace('+',' ')
-    //replaced2 = inputs2.replace('%40','@')
-    name = replaced1;
-    email = replaced2;
-}
-var object = {
-name:name,
-email:email
-}
-console.log(object.email)
-
-
-
-/*var jqxhr = $.ajax({
-url: url,
-method: "GET",
-dataType: "json",
-data: object,
-success: success()
-})*/
-
-function success() {
-    console.log(object);
-}
-</script>
+<script src="index.js"></script>
 </body>
 </html>                            
