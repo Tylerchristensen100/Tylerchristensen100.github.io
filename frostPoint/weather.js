@@ -18,8 +18,7 @@ $(document).ready(function() {
     //         $('#error').html('Field cannot be empty');
     //     }
     // })
-
-
+var date;
 
     $('#search').click(function(){
 
@@ -35,20 +34,19 @@ $(document).ready(function() {
                 type: "GET",
                 dataType: "jsonp",
                 success: function(data){
-                    
+                    date = data;
                     console.log(city);
                     console.log(data);
                     console.log(data.main.temp_min);
                     
-
-                    $("#show").html(data.main.temp_min);
+                    $("#show").append("<h1>"+data+"</h1>");
+                    $("#show").append("<h1>"+data.main.temp_min+"</h1>");
                 }
             });
 
         }else{
             $('#error').html('Field cannot be empty');
         }
-
     });
 
 
