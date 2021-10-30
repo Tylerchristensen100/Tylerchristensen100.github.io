@@ -1,24 +1,22 @@
 $(document).ready(function() {
+    var key = config.API_TOKEN;
+    function frost(data) {
+        $("#show").append("<p>"+data.main.temp_min+"</p>");
+        if(data.main.temp_min <=32) {
+            $("#show").html("<h2>There will be frost tomorrow!!</h2>");
+        }
+        if(data.main.temp_min <=34 && data.main.humidity > 65) {
+            $("#show").html("<h2>There will be frost tomorrow!</h2>");
+        }
+        if(data.main.temp_min >=34) {
+            $("#show").html("<h2>There won't be frost tomorrow!</h2>");
+        }
 
+        $("#temp").html("<h2>The Low is: " + data.main.temp_min + "</h2>");
+    }
+   
 
-    // $('#search').click(function() {
-    //     var city = $('#searchBox').val();
-
-    //     if(city != '') {
-    //         $.ajax({
-    //             url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=imperial' + '&appid=c3b171ee77a6e4656cd3a217eeb54ccc',
-    //             type:'GET',
-    //             dataType: 'jsonp',
-    //             success: function(data) {
-    //                 console.log(data.weather);
-    //             }
-    //         })
-
-    //     } else {
-    //         $('#error').html('Field cannot be empty');
-    //     }
-    // })
-var date;
+    
 
     $('#search').click(function(){
 
@@ -30,17 +28,15 @@ var date;
 
             $.ajax({
                 
-                url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&APPID=c3b171ee77a6e4656cd3a217eeb54ccc",
+                url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&APPID=" + key,
                 type: "GET",
                 dataType: "jsonp",
                 success: function(data){
-                    date = data;
                     console.log(city);
                     console.log(data);
                     console.log(data.main.temp_min);
+                    frost(data);
                     
-                    $("#show").append("<h1>"+data+"</h1>");
-                    $("#show").append("<h1>"+data.main.temp_min+"</h1>");
                 }
             });
 
