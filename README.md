@@ -4,6 +4,11 @@
 
 
 <h1 align="center">Tyler Christensen
+  
+  
+  I really like to code!
+  
+  I can talk tech with you for hours.  Unless its purely about apple products in which the conversation will not make it past the hour mark.
 
 <div align="center">
 <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Tylerchristensen100&show_icons=true&hide_border=true&&count_private=true&include_all_commits=true" />
