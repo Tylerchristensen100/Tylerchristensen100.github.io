@@ -6,10 +6,12 @@
 <h1 align="center">Tyler Christensen
   
   
-  I really like to code!
-
   
-  I can talk tech with you for hours!
+  
+  
+  
+  I like to code!
+
   
   
   
