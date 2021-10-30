@@ -8,5 +8,9 @@
 <div align="center">
 <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Tylerchristensen100&show_icons=true&hide_border=true&&count_private=true&include_all_commits=true" />
 
+  
+  
+  [![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Tylerchristensen100&)][github]
+
 
   
