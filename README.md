@@ -10,7 +10,7 @@
 
   
   
-  [![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Tylerchristensen100&)][github]
+  [![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Tylerchristensen100&layout=compact)][github]
 
 
   
