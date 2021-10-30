@@ -1,127 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="icon" href="img/moroni.png">
-<title>Tyler Mission</title>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115920345-5"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
+    <meta charset="UTF-8">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115920345-4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-115920345-5');
-</script>
+        gtag('config', 'UA-115920345-4');
+    </script>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
+    <!-- <meta rel="icon" type="image/icon" href="favicon.ico"> -->
+     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <title>Tyler Christensen Resume</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="index.css">
+   
 
 </head>
 
-<body data-spy="scroll" data-target="#navbar-orig" data-offset="70">
-
-<!-- <nav id="navbar-orig" class="navbar sticky-top navbar-expand navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav nav-pills mx-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#bio">Bio</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="#email">Email list</a>
-            </li>
-         
-        </ul>
-        
-    </div>
-</nav> -->
-
-
-
-<section id="bio">
+<body>
+   
     <div class="container">
         <div class="row">
-            <div class="col-4"></div>
-            <div class=" col-lg-4 col-sm-12">
-                <h1 class="mt-5 mx-auto">About Me</h1><br>
+            <div class="info col-12 col-md-10 col-xl-6 text-success" title="Important information">
+                <h1 id="name"></h1><span id="egg"></span>
+                <h2 id="cs"></h2>
+                
+                <br>
+                <p id="github" class="h4"><a id="link" href="https://github.com/Tylerchristensen100"></a></p>
+                <br>
             </div>
-            <div class="col-4"></div>
         </div>
-        <div class="row">
-            <div class="col-1"></div>
-            <div class=" col-lg-5 col-sm-10">
-                <img class="portrait" src="img/portrait.jpg" alt="a portrait of me">
+
+    <div class="row">
+        <div class="skills col-12 col-md-10 col-xl-6 pb-0" title="Programming languages and compenency">
+            <h2 id="toggleSkills" class="clickable text-success">Skills</h2>
+            <div id="skillsHandler" class="closed text-muted col-xl-8">
+                <h3 id="htmlName">HTML</h3>
+                    <h5 id="htmlDetail"></h5>
+                    <h5 id="htmlExperience"></h5>
+                <br>
+
+                <h3 id="cssName">CSS</h3>
+                    <h5 id="cssDetail"></h5>
+                    <h5 id="cssExperience"></h5>
+                <br>
+
+                <h3 id="jsName">JavaScript</h3>
+                    <h5 id="jsDetail"></h5>
+                    <h5 id="jsExperience"></h5>
+                <br>
+
+                <h3 id="csName">C#</h3>
+                    <h5 id="csDetail"></h5>
+                    <h5 id="csExperience"></h5>
+                    <h5 id="csKnowledge"></h5>
+                <br>
+
+                <h3 id="cppName">C++</h3>
+                    <h5 id="cppDetail"></h5>
+                    <h5 id="cppExperience"></h5>
             </div>
-            <div class="col-lg-5 col-sm-12">
-                <p>My name is Tyler Christensen. I have been called to serve an LDS in the Iowa City, Iowa mission.
-                   I report to the MTC October 30th 2019</p>
-                   <br><br>
-                   <p>I have an unhindered fascination with technology.  I am constantly modifying or just learning
-                       about technology.  I am an avid mountain biker and love hiking and anything outdoors.</p>
-                       <div class="row">
-                           <div class="col-lg-6 col-sm-12">
-                               <img src="img/timp.jpg" alt="My hike of timp in 2019"><br><br>
-                           </div>
-                           <div class="col-lg-6 col-sm-12">
-                               <img src="img/moab.jpg" alt="">
-                           </div>
-                       </div>
-            </div>
-            <div class="col-1"></div>
-        </div>
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-lg-4 col-sm-12">
-                <h1 class="mt-5 mx-auto">Education</h1>
-            </div>
-            <div class="col-4"></div>
-        </div>
-        <div class="row">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <p>I am studying Computer Science at Utah Valley University. I know JavaScript(jQuery), HTML, CSS(Bootstrap), and C# and some C++.</p>
-                <a class="resume text-success" href="Resume/index.html" target="_blank">Resume</a>
-            </div>
-            <div class="col-2"></div>
-        </div>
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-lg-4 col-sm-12">
-                <h2 class="mt-5 mx-auto center">Follow Me</h2>
-            </div>
-            <div class="col-4"></div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-sm-1"></div>
-            <div class="col-lg-2 col-sm-3"><a href="https://www.linkedin.com/in/tyler-c-83900b11b/" target="_blank"><i
-                        class="fa fa-linkedin fa-5x"></i></a></div>
-            <div class="col-lg-2 col-sm-3"><a href="https://www.instagram.com/tylerchristensen100/" target="_blank"><i
-                        class="fa fa-instagram fa-5x "></i></a></div>
-            <div class="col-lg-2 col-sm-3"><a href="https://www.facebook.com/tyler.christensen.77920" target="_blank"><i
-                        class="fa fa-facebook fa-5x"></i></a></div>
-            <div class="col-lg-3 col-sm-2"></div>
         </div>
     </div>
-</section>
-        <br>
-        <br>
-        <br>
-        <br>
-   
+    <hr>
+    <div class="row">
+        <div class="education col-12 col-md-10 col-xl-6" title="Educational achievments and current learning">
+            <h2 id="toggleEducation" class="clickable text-success">Education</h2>
+            <div id="educationHandler" class="closed text-muted">
+                <h3 id="eduName"></h3>
+                <h4 id="eduGrad"></h4>
+                <h4 id="eduGradDate"></h4>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="work col-12 col-md-10 col-xl-6" title="Code projects I have done">
+            <h2 id="toggleProjects" class="clickable text-success">Projects</h3>
+                <div id="projectHandler" class="closed text-muted">
+                    <p class="h3"><a id="project1" href="http://Chesterfieldassociates.net"></a></p>
+                    <h4 id="detail1"></h4>
+                    <p class="h3"><a id="project2" href="Template/index.html"></a></p>
+                    <h4 id="detail2"></h4>
+                </div>
+            
+        </div>
+    </div>
+     <br>
+    
+    
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="index.js"></script>
+    
+
+
+    </div>   <!-- Container -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+
 </body>
-</html>                            
+
+</html>
+

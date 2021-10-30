@@ -1,0 +1,51 @@
+ {
+    "name": "Tyler Christensen",
+    "egg": "&nbsp;",
+    "degree": "Computer Science B.S.",
+    "contact": {
+        "github": "GitHub"
+    },
+    "skills": {
+        "html": {
+            "name": "HTML",
+            "detail": "Multiple Websites from Ground up",
+            "experience": "6 Months of experience"
+        },
+        "css": {
+            "name": "CSS",
+            "detail": "Multiple Websites from Ground up",
+            "experience": "6 Months of experience"
+        },
+        "javascript": {
+            "name": "JavaScript",
+            "detail": "Small browser based game",
+            "experience": "2 Months of experience"
+        },
+        "cSharp": {
+            "name": "C#",
+            "detail": "Small console projects",
+            "experience": "6 Months of experience",
+            "knowledge": "Know basics"
+        },
+        "cPP": {
+            "name": "C++",
+            "detail": "Small console projects",
+            "experience": "4 Months of experience"
+        }
+    },
+    "projects": {
+        "title1": "Chesterfield Associates",
+        "detail1": "Used Bootstrap template and managed SFTP",
+        "title2": "Bootstrap Template",
+        "detail2": "Created my own Bootstrap template"
+    },
+    "education": {
+        "name": "Utah Valley University",
+        "level": "Undergraduate",
+        "expected": "Expected Graduation: 2023"
+    },
+    "awards": [
+        "Eagle Scout",
+        "CTE Pathways"
+    ]
+ }
