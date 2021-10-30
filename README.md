@@ -7,9 +7,14 @@
   
   
   I really like to code!
-  <br>
+
+  
   I can talk tech with you for hours!
-  <br>
+  
+  
+  
+  
+  
   
 
 <div align="center">
