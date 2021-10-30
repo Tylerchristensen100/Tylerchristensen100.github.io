@@ -116,6 +116,8 @@ function Project() {
     $('#detail1').html(resume.projects.detail1);
     $('#project2').html(resume.projects.title2);
     $('#detail2').html(resume.projects.detail2);
+    $('#project3').html(resume.projects.title3);
+    $('#detail3').html(resume.projects.detail3);
 }
 
 function Education() {
