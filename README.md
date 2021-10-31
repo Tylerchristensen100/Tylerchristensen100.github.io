@@ -15,3 +15,5 @@
   ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Tylerchristensen100&layout=compact)
 
  I like to code!
+  
+ I will use and preach dark mode into my grave!
