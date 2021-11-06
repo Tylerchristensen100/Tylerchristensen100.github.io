@@ -1,18 +1,19 @@
 $(document).ready(function() {
     var key = config.API_TOKEN;
     function frost(data) {
+        $("#temp").html("<h2>The Low is: " + data.main.temp_min + "</h2>");
         $("#show").append("<p>"+data.main.temp_min+"</p>");
-        if(data.main.temp_min <=32) {
+        if(data.main.temp_min <=34) {
             $("#show").html("<h2>There will be frost tomorrow!!</h2>");
         }
-        if(data.main.temp_min <=34 && data.main.humidity > 65) {
-            $("#show").html("<h2>There will be frost tomorrow!</h2>");
+        if(data.main.temp_min <=38 && data.main.humidity > 65) {
+            $("#show").html("<h2>There will probably be frost tomorrow!</h2>");
         }
-        if(data.main.temp_min >=34) {
+        if(data.main.temp_min >=39) {
             $("#show").html("<h2>There won't be frost tomorrow!</h2>");
         }
 
-        $("#temp").html("<h2>The Low is: " + data.main.temp_min + "</h2>");
+        
     }
    
 
