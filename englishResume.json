@@ -9,17 +9,17 @@
         "html": {
             "name": "HTML",
             "detail": "Multiple Websites from Ground up",
-            "experience": "6 Months of experience"
+            "experience": "1 year experience"
         },
         "css": {
             "name": "CSS",
             "detail": "Multiple Websites from Ground up",
-            "experience": "6 Months of experience"
+            "experience": "1 year of experience"
         },
         "javascript": {
             "name": "JavaScript",
             "detail": "Small browser based game",
-            "experience": "2 Months of experience"
+            "experience": "10 months experience"
         },
         "cSharp": {
             "name": "C#",
@@ -30,16 +30,16 @@
         "cPP": {
             "name": "C++",
             "detail": "Small console projects",
-            "experience": "4 Months of experience"
+            "experience": "6 Months of experience"
         }
     },
     "projects": {
         "title1": "Chesterfield Associates",
-        "detail1": "Used Bootstrap template and managed SFTP",
+        "detail1": "Used Bootstrap template and managed over SFTP",
         "title2": "Bootstrap Template",
         "detail2": "Created my own Bootstrap template",
         "title3": "Frost Point",
-        "detail3": "Calculate if there will be frost in the morning"
+        "detail3": "Calculate if there will be frost in the morning, based on openweathermap API"
     },
     "education": {
         "name": "Utah Valley University",
