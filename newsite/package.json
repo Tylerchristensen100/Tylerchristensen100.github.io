@@ -1,5 +1,5 @@
 {
-    "name": "streak",
+    "name": "newsite",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -16,7 +16,7 @@
         "react-scripts": "5.0.0",
         "styled-components": "^5.3.5",
         "web-vitals": "^2.1.4",
-        "homepage": "https://tylerchristensen100.github.io/tylerchristensen100"
+        "homepage": "https://tylerchristensen100.github.io"
     },
     "scripts": {
         "start": "react-scripts start",
