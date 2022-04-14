@@ -91,7 +91,6 @@ const Awards = () => {
 const Resume = () => {
 return (
 	<>
-        <div className="header"><h1>Resume</h1></div>
         <div className="container">
             <Info />
             <h2>Skills</h2>
