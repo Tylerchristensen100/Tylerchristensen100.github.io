@@ -92,15 +92,18 @@ const Resume = () => {
 return (
 	<>
         <div className="header"><h1>Resume</h1></div>
-        <Info />
-        <h2>Skills</h2>
-        <Skills />
-        <h2>Education</h2>
-        <Education />
-        <h2>Projects</h2>
-        <Projects />
-        <h2>Awards</h2>
-        <Awards />
+        <div className="container">
+            <Info />
+            <h2>Skills</h2>
+            <Skills />
+            <h2>Education</h2>
+            <Education />
+            <h2>Projects</h2>
+            <Projects />
+            <h2>Awards</h2>
+            <Awards />
+            <br />
+        </div>
     </>
 );
 };
