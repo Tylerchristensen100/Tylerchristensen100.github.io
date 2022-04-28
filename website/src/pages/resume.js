@@ -64,10 +64,10 @@ const Projects = () => {
     
         return(
             <>
-            <h3>{resume.projects[0].title}</h3>
+            <h3><a href="http://chesterfieldassociates.net/" title="Chesterfield Associates" target="_blank">{resume.projects[0].title}</a></h3>
             <h5>{resume.projects[0].detail}</h5>
             <br />
-            <h3>{resume.projects[1].title}</h3>
+            <h3><a href="/projects/Resume/Template/" title="Bootstrap template" target="_blank">{resume.projects[1].title}</a></h3>
             <h5>{resume.projects[1].detail}</h5>
             <br />
             </>
