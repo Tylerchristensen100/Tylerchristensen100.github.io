@@ -75,7 +75,7 @@ button.accordion-button {
     color: #fff;
 }
 .accordion-button::after {
-    background-image: url("/img/cheveron-down-solid.svg")!important;
+    background-image: url("/projects/devotional/img/cheveron-down-solid.svg")!important;
 }
 .footer {
     min-height: 100px;
