@@ -1,7 +1,7 @@
 export const projects = [{
-        title: "React Reserve",
-        subtitle: "MERN Stack",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        title: "Spiritual Streak",
+        subtitle: "Simple Flutter App",
+        description: "A counter that tracks history, and saves it to firebase and local storage (SharedPreferences in flutter)",
         image: "./project-1.gif",
         link: "https://reactbootcamp.com",
     },
@@ -28,4 +28,4 @@ export const projects = [{
     },
 ];
 
-export const skills = ["skill1", "skill2", "skill3", "skill4", "skill5", "skill6", "skill7", "skill8", "skill9", "skill10"];
+export const skills = ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "React", "Flutter", "Dart", "Python", "C++"];
