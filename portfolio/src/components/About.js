@@ -1,4 +1,5 @@
 import React from 'react';
+import {BsGithub, BsLinkedin,BsFacebook,BsInstagram} from 'react-icons/bs'
 
 function About() {
     return (
@@ -10,14 +11,12 @@ function About() {
             <br className="hidden lg:inline-block dark:text-white" />I love to build amazing sites.
           </h1>
           <p className="mb-8 leading-relaxed dark:text-white">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-            laborum quasi, incidunt dolore iste nostrum cupiditate voluptas?
-            Laborum, voluptas natus?
+           I am a passionate web and mobile developer with a passion for building fast and intuitive applications. 
           </p>
           <div className="flex justify-center">
             <a
               href="#contact"
-              className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg dark:text-white">
+              className="inline-flex text-black dark:text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg dark:text-white">
               Work With Me
             </a>
             <a
@@ -26,14 +25,21 @@ function About() {
               See My Past Work
             </a>
           </div>
+          <div className="p-8 text-black dark:text-white inline-flex flex-wrap">
+           <a href="https://github.com/Tylerchristensen100" title="github" className="block w-40"><BsGithub className="mx-auto inline-block w-20 mb-4"  size={50} /></a>
+           <a href="https://www.linkedin.com/in/tyler-c-83900b11b/" title="linkedin" className="block w-40"><BsLinkedin className="mx-auto inline-block w-20 mb-4"  size={50} /></a>
+           <a href="" title="facebook" className="block w-40"><BsFacebook className="mx-auto inline-block w-20 mb-4"  size={50} /></a>
+           <a href="" title="instagram" className="block w-40"><BsInstagram className="mx-auto inline-block w-20 mb-4"  size={50} /></a>
+           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
           <img
             className="object-cover object-center rounded"
             alt="hero"
-            src="./coding.svg"
+            src="./img/me.jpg"
           />
         </div>
+        
       </div>
     </section>
     );

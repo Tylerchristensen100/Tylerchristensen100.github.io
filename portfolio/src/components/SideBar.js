@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import { stack as Menu } from 'react-burger-menu';
 import Switcher from './Switcher';
 
@@ -16,14 +16,14 @@ function SideBar() {
         setOpen(false)
       }
 
-      const [darkTheme,setDarkTheme] = useState(false);
-      useEffect(() => {
-        if (document.querySelector('html').classList.contains('dark')) {
-          setDarkTheme(true);
-        } else {
-          setDarkTheme(false);
-        }
-      }, []);
+      // const [darkTheme,setDarkTheme] = useState(false);
+      // useEffect(() => {
+      //   if (document.querySelector('html').classList.contains('dark')) {
+      //     setDarkTheme(true);
+      //   } else {
+      //     setDarkTheme(false);
+      //   }
+      // }, []);
 
 
     return (

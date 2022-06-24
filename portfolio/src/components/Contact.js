@@ -14,7 +14,7 @@ function Contact() {
               marginHeight={0}
               marginWidth={0}
               style={{ filter: "opacity(0.7)" }}
-              src="https://www.google.com/maps/embed/v1/place?q=97+warren+st+new+york+city&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97379.88843173109!2d-111.76550253846979!3d40.29526083330343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874d7804e4b45119%3A0x642bc3cf90b21ed1!2sOrem%2C%20UT!5e0!3m2!1sen!2sus!4v1656092733882!5m2!1sen!2sus"
             />
             <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
               <div className="lg:w-1/2 px-6">
@@ -22,34 +22,29 @@ function Contact() {
                   ADDRESS
                 </h2>
                 <p className="mt-1">
-                  97 Warren St. <br />
-                  New York, NY 10007
+                 Orem, Utah
                 </p>
               </div>
               <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                <h2 className="title-font font-semibold text-white tracking-widest text-xs">
-                  EMAIL
-                </h2>
-                <a className="text-indigo-400 leading-relaxed">
-                  reedbarger@email.com
-                </a>
+                <h2 className="title-font font-semibold text-white tracking-widest text-xs">EMAIL</h2>
+                <a className="text-indigo-400 leading-relaxed" href="mailto:tylerchristensen100@gmail.com">tylerchristensen100@gmail</a>
                 <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
                   PHONE
                 </h2>
-                <p className="leading-relaxed">123-456-7890</p>
+                <p className="leading-relaxed"><a href="message:3852076122" title="message me at: 385 207 6122">385-207-6122</a></p>
               </div>
             </div>
           </div>
           <form
-            netlify
+          action="https://formspree.io/f/mpzbelee"
+          method="POST"
             name="contact"
             className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
             <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
               Hire Me
             </h2>
             <p className="leading-relaxed mb-5">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
-              suscipit officia aspernatur veritatis. Asperiores, aliquid?
+              Contact me for more information or just to say hello.
             </p>
             <div className="relative mb-4">
               <label htmlFor="name" className="leading-7 text-sm text-gray-400">
@@ -82,7 +77,7 @@ function Contact() {
               <textarea
                 id="message"
                 name="message"
-                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-black py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               />
             </div>
             <button
