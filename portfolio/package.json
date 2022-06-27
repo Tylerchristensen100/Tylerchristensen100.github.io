@@ -1,6 +1,6 @@
 {
     "name": "portfolio",
-    "homepage": "tylerchristensen100.github.io",
+    "homepage": "tylerchristensen100.github.io/p",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -9,7 +9,6 @@
         "@testing-library/react": "^13.3.0",
         "@testing-library/user-event": "^13.5.0",
         "autoprefixer": "^10.4.7",
-        "gh-pages": "^4.0.0",
         "postcss": "^8.4.14",
         "react": "^18.2.0",
         "react-burger-menu": "^3.0.8",
@@ -47,5 +46,8 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "gh-pages": "^4.0.0"
     }
 }
