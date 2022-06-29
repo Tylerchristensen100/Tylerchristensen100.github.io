@@ -3,7 +3,7 @@ export const projects = [{
         subtitle: "Simple Flutter App",
         description: "A counter that tracks history, and saves it to firebase and local storage (SharedPreferences in flutter)",
         image: "./img/projects/spiritualStreak.png",
-        link: "./projects/spiritualStreak/",
+        link: "https://62bc6e51a237c9164111ecd0--subtle-naiad-e13f25.netlify.app/",
 
     },
     {

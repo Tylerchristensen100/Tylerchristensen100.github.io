@@ -28,8 +28,8 @@ function About() {
           <div className="p-8 text-black dark:text-white inline-flex flex-wrap">
            <a href="https://github.com/Tylerchristensen100" title="github" className="block w-40"><BsGithub className="mx-auto inline-block w-20 mb-4"  size={50} /></a>
            <a href="https://www.linkedin.com/in/tyler-c-83900b11b/" title="linkedin" className="block w-40"><BsLinkedin className="mx-auto inline-block w-20 mb-4"  size={50} /></a>
-           <a href="" title="facebook" className="block w-40"><BsFacebook className="mx-auto inline-block w-20 mb-4"  size={50} /></a>
-           <a href="" title="instagram" className="block w-40"><BsInstagram className="mx-auto inline-block w-20 mb-4"  size={50} /></a>
+           <a href="https://www.facebook.com/tyler.christensen.77920" title="facebook" className="block w-40"><BsFacebook className="mx-auto inline-block w-20 mb-4"  size={50} /></a>
+           <a href="https://www.instagram.com/tylerchristensen100" title="instagram" className="block w-40"><BsInstagram className="mx-auto inline-block w-20 mb-4"  size={50} /></a>
            </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
