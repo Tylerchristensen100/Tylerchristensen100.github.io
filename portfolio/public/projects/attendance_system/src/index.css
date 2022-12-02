@@ -6,9 +6,47 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color:#ffffff;
+  background-color:#030303;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+ul.unstyled {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+tr.table-head {
+  font-weight: bold;
+  padding-bottom:0.3rem;
+  background-color:#262626;
+  border-bottom: 5px solid red;
+}
+.name {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding-left: 1rem;
+  padding-right:1rem;
+}
+.attendance {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-left: 1rem;
+  padding-right:1rem;
+}
+.attendance input {
+  width: 2rem;
+  height: 2rem;
+  margin: 0.5rem;
+  padding: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 1px solid #262626;
+  border-radius: 0.5rem;
+  background-color: #262626;
+  color: #ffffff;
 }

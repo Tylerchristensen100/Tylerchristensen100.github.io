@@ -28,9 +28,17 @@ function Table() {
 
     return (
         <>
-            <ul>
+            <tbody className="unstyled">
+                <tr className="table-head">
+                    <td className="name">First Name</td>
+                    <td className="name">Last Name</td>
+                    |
+                    <td className="attendance">Attendance</td>
+                </tr>
+
+                
                 {list.map((item) =>  <ListItem key={item.id} data={item}/>)}
-            </ul>
+            </tbody>
         </>
     );
 };
