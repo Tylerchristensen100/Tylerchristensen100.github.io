@@ -1,9 +1,4 @@
 import Checkbox from "./Checkbox";
-import {useState} from 'react';
-
-
-
-
 
 
 function ListItem(data) {
@@ -11,10 +6,6 @@ function ListItem(data) {
     
     const dates = Object.keys(item.Attendance)
     
-    const isAttended = (date) =>{
-        // console.log(item.Attendance?.[date])
-        return item.Attendance?.[date];
-    }
 
     return (
         <tr key="{item.id}">

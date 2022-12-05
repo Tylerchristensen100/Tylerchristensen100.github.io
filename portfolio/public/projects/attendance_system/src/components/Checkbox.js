@@ -1,6 +1,6 @@
 import { db } from "./Firebase";
-import { ref, set, update } from 'firebase/database';
-import { useState,useEffect } from 'react';
+import { ref, set } from 'firebase/database';
+import { useState } from 'react';
 
 
 const Push = (item, date, isChecked) => {

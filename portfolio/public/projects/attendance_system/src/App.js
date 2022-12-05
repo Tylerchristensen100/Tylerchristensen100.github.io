@@ -7,7 +7,6 @@ function App() {
     <main className="text-gray-400 bg-gray-900 body-font" id="outer-container">
       <Navbar />
       <div id="page-wrap" className="container">
-       <h1>TEST</h1>
        <Table />
       </div>
     </main>
