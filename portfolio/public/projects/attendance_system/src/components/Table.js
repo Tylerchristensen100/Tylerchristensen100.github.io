@@ -17,13 +17,11 @@ function Table() {
                 });
         } 
 
-
         try{
             getData();
         } catch (error) {
             console.log(error)
-        }
-                     
+        }         
     },[]);
 
     return (
@@ -37,7 +35,7 @@ function Table() {
                 </tr>
 
                 
-                {list.map((item) =>  <ListItem key={item.id} data={item}/>)}
+                {list.map((item) =>  <ListItem key={item.id} data={item} />)}
             </tbody>
         </>
     );
