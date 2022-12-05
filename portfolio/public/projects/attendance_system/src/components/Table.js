@@ -6,7 +6,20 @@ import ListItem from "./ListItem";
 
 function Table() {
     const [list, setList] = useState([]);
+    let dates = [];
 
+    function decideDates(rawDates) {
+        let today = new Date();
+        let dateList = rawDates.map((date) => getDateObject(date));
+        dateList.push(today);
+        dateList.sort((date1, date2) => date1 - date2);
+        let index = dateList.indexOf(today);
+
+        //if current day is sunday then display today
+        //if current day is not sunday then don't display today...display next sunday
+        dates = [dateList[index - 2], dateList[index - 1], dateList[index], dateList[index + 1]];
+        console.log(dates)
+    }
 
     useEffect(() => {
         const getData = async () => {
@@ -19,6 +32,7 @@ function Table() {
 
         try{
             getData();
+            decideDates(Object.keys(list[0].Attendance));
         } catch (error) {
             console.log(error)
         }         
@@ -50,6 +64,12 @@ function Table() {
         )
     }
 
+    function formatItem(item) {
+        //Strip all attendance data except for the 5 dates we want to display(cleaner and easier since the other code already is working)
+        return item;
+    }
+    
+
     return (
         <>
             <tbody className="unstyled">
@@ -61,7 +81,7 @@ function Table() {
                 </tr>
 
                 
-                {list.map((item) =>  <ListItem key={item.id} data={item} />)}
+                {list.map((item) =>  <ListItem key={item.id} data={formatItem(item)} />)}
             </tbody>
         </>
     );
