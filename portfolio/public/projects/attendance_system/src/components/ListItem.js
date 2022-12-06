@@ -1,9 +1,8 @@
 import Checkbox from "./Checkbox";
 
 
-function ListItem(data) {
-    const item = data.data;
-    
+function ListItem({data}) {
+    const item = data;
     const dates = Object.keys(item.Attendance)
     
 
