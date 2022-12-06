@@ -1,15 +1,8 @@
-import { useState,useEffect } from 'react';
-import { db } from "./Firebase";
-import { ref, onValue } from "firebase/database";
-
 import ListItem from "./ListItem";
 
 
 
-
-function Table() {
-    const [list, setList] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+function Table({list, origAttendance}) {
 
     var dates =[];
     var objectDates = [];
@@ -20,7 +13,7 @@ function Table() {
     }
 
     function decideDates() {
-        let rawDates = Object.keys(list[1].Attendance)
+        let rawDates = Object.keys(origAttendance)
         let today = new Date();
         let dateList = rawDates.map((date) => getDateObject(date));
         dateList.push(today);
@@ -59,21 +52,7 @@ function Table() {
         
     }
 
-    useEffect(() => {
-        const getData = async () => {
-            const query = ref(db, "/1leH85GY7zRQtyYVxRxjJANahPw6MjnEASokm1VRQZ-k/Sheet1"); 
-            return onValue(query, (snapshot) => {
-                const data = snapshot.val();
-                setList(data)
-                setIsLoading(false);
-                });
-        }
-        try{
-            getData();
-        } catch (error) {
-            console.log(error)
-        }         
-    },[]);
+    
 
     function getDateObject(date) {
         const monthTranslation = {"jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6, "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12}
@@ -111,30 +90,25 @@ function Table() {
         return newItem;
     }
     
-    if(isLoading) {
-        return (
-            <>
-                <h1>Loading...</h1>
-            </>
-        );
-    } else {
+    
         
         return (
             <>
-                <tbody className="unstyled">
-                    <tr className="table-head">
-                        <td className="name">First Name</td>
-                        <td className="name">Last Name</td>
-                        |
-                        <td className="attendance">{getDateList()}</td>
-                    </tr>
+            <    div className="container">
+                    <tbody className="unstyled">
+                        <tr className="table-head">
+                            <td className="name">First Name</td>
+                            <td className="name">Last Name</td>
+                            |
+                            <td className="attendance">{getDateList()}</td>
+                        </tr>
 
 
-                    {list.map((item) =>  <ListItem key={item.id} data={formatItem(item)} />)}
-                </tbody>
+                        {list.map((item) =>  <ListItem key={item.id} data={formatItem(item)} />)}
+                    </tbody>
+                </div>
             </>
         );
     }
-};
 
 export default Table;

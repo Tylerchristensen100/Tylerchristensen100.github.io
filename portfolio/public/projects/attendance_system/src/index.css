@@ -19,6 +19,15 @@ ul.unstyled {
   padding: 0;
   margin: 0;
 }
+tbody {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #262626;
+  border-radius: 0.5rem;
+  border-collapse:separate; 
+  border-spacing: 0 1em;
+}
 tr.table-head {
   font-weight: bold;
   padding-bottom:0.3rem;
@@ -26,8 +35,7 @@ tr.table-head {
   border-bottom: 5px solid red;
 }
 td.name {
- column-width:0.3rem;
- column-gap:10px;
+ column-gap:0px;
 }
 .name {
   font-size: 1.2rem;
@@ -38,26 +46,31 @@ td.name {
 .attendance {
   font-size: 1.5rem;
   font-weight: 600;
+  width:100%;
   padding-left: 1rem;
   padding-right:1rem;
 }
-.attendance input {
-  width: 2rem;
-  height: 2rem;
-  margin: 0.7rem;
-  padding: 0;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  border: 1px solid #262626;
-  border-radius: 0.5rem;
-  background-color: #262626;
-  color: #ffffff;
-}
+
+
 
 .dateLabel {
   font-size: 1rem;
   font-weight: 600;
-  padding-left: 0.3rem;
-  padding-right:0.3rem;
+  padding-left: 0.7rem;
+  padding-right:0.7rem;
+}
+input.checkbox {
+  width:2rem;
+  height:2rem;
+  text-align:center;
+  font-size:1.5rem;
+  margin-left:1.1rem;
+  margin-right:1.1rem;
+}
+
+.search {
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  padding-right:1rem;
+  width:100%;
 }
