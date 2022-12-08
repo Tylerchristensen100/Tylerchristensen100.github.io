@@ -1,16 +1,17 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Navbar from "./components/Navbar";
-import Table from "./components/Table";
-import Search from './components/Search';
+import Getter from "./components/Getter";
+import Footer from "./components/Footer";
 function App() {
+  const [active, setActive] = useState(window.location.href.split("#")[1]);
 
   return (
     <main className="text-gray-400 bg-gray-900 body-font" id="outer-container">
-      <Navbar />
-      <div id="page-wrap" className="container">
-        <Search />
-       {/* <Table /> */}
+      <Navbar active={active} setActive={setActive} />
+      <div id="page-wrap" className="container-fluid">
+          <Getter active={active} />        
       </div>
+      <Footer />
     </main>
   );
 }

@@ -94,18 +94,20 @@ function Table({list, origAttendance}) {
         
         return (
             <>
-            <    div className="container">
-                    <tbody className="unstyled">
-                        <tr className="table-head">
-                            <td className="name">First Name</td>
-                            <td className="name">Last Name</td>
-                            |
-                            <td className="attendance">{getDateList()}</td>
-                        </tr>
+                <div className="">
+                    <table>
+                        <tbody className="">
+                            <tr className="table-head">
+                                <td className="name">First Name</td>
+                                <td className="name border-right">Last Name</td>
+                                
+                                <td className="attendance">{getDateList()}</td>
+                            </tr>
 
 
-                        {list.map((item) =>  <ListItem key={item.id} data={formatItem(item)} />)}
-                    </tbody>
+                            {list.map((item) =>  <ListItem key={item.id} data={formatItem(item)} />)}
+                        </tbody>
+                    </table>
                 </div>
             </>
         );

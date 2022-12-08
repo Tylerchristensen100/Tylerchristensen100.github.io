@@ -9,8 +9,8 @@ function ListItem({data}) {
     return (
         <tr key="{item.id}">
            <td className="name">{item.first_name}</td>
-           <td className="name">{item.last_name}</td>
-            |
+           <td className="name border-right">{item.last_name}</td>
+            
             <td className="attendance">
            {dates.map((date, index) => {
              return <Checkbox key={index} date={date} attended={() => {return item.Attendance?.[date];}} item={item} />

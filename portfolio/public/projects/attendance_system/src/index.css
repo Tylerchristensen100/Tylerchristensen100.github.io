@@ -14,51 +14,43 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-ul.unstyled {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+table {
+  width:100%;
+  border-collapse: collapse;
+  border-spacing: 1px;
+  white-space:nowrap;
+  overflow-x: auto;
 }
 tbody {
   width: 100%;
-  border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #262626;
-  border-radius: 0.5rem;
-  border-collapse:separate; 
-  border-spacing: 0 1em;
 }
 tr.table-head {
   font-weight: bold;
   padding-bottom:0.3rem;
   background-color:#262626;
-  border-bottom: 5px solid red;
-}
-td.name {
- column-gap:0px;
 }
 .name {
+  min-width:100px;
   font-size: 1.2rem;
   font-weight: 400;
   padding-left: 0.2rem;
   padding-right:0.2rem;
 }
 .attendance {
-  font-size: 1.5rem;
+  white-space:nowrap;
+  /* font-size: 1.5rem;
   font-weight: 600;
   width:100%;
   padding-left: 1rem;
-  padding-right:1rem;
+  padding-right:1rem; */
 }
-
-
-
 .dateLabel {
   font-size: 1rem;
   font-weight: 600;
   padding-left: 0.7rem;
   padding-right:0.7rem;
-}
+} 
 input.checkbox {
   width:2rem;
   height:2rem;
@@ -74,3 +66,128 @@ input.checkbox {
   padding-right:1rem;
   width:100%;
 }
+tr:nth-child(odd) {
+  background-color:#262626;
+}
+tr:hover {
+  background-color:#161616;
+}
+.border-right {
+  border-right: 1px solid #ffffff;
+  margin-right:5px;
+}
+
+@media screen and (min-width:1200px) {
+  .container-fluid {
+    max-width: 1200px;
+  }
+  table {
+    margin-left:auto;
+    margin-right:auto;
+    white-space:nowrap;
+    overflow-x:scroll;
+    width:auto;
+  }
+  .name {
+    font-size: 1.5rem;
+    min-width:100px;
+  }
+  .dateLabel {
+    font-size:1.2rem;
+    padding-left:0.7rem;
+    padding-right:0.7rem;
+  }
+  .search {
+    font-size: 1.5rem;
+    border-radius: 15px;
+  }
+  input.checkbox {
+    width:2.5rem;
+    height:2.5rem;
+    font-size:1.8rem;
+    margin-left:1.1rem;
+    margin-right:1.1rem;
+  }
+}
+
+footer {
+  margin-top:3rem;
+}
+
+.center {
+  text-align: center;
+}
+.listing-form {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.listing-form p {
+  font-size: 1.2rem;
+  margin-bottom:5px;
+}
+.listing-form a {
+  display:block;
+  font-size: 1.2rem;
+  text-align:center;
+  margin-top:0px;
+  margin-bottom:4rem;
+}
+.copyright {
+  display:block;
+  font-size: 0.8rem;
+  text-align:center;
+  margin-bottom:10px;
+  color:#ffffff;
+  text-decoration:none;
+}
+.copyright:hover {
+  color:#ffffff;
+  text-decoration:none;
+}
+
+@media screen and (max-width: 600px) {
+  
+  table{
+    white-space:nowrap;
+    overflow-x:scroll;
+
+  }
+  .table-head {
+    column-width:200px;
+  }
+  td.name {
+    /* width:50px; */
+    /* max-width:30px; */
+    column-width:80px;
+  }
+  .name {
+    font-size: 1rem;
+    min-width:70px;
+  }
+  .name.border-right {
+    padding-right:15px;
+
+  }
+  .dateLabel {
+    font-size:0.6rem;
+    padding-left:0.2rem;
+    padding-right:0.1rem;  
+  }
+  td.attendance {
+    font-size: 1rem;
+    min-width: 150px;
+    }
+  input.checkbox {
+    width:1.5rem;
+    height:1.5rem;
+    font-size:1rem;
+    margin-left:0.3rem;
+    margin-right:0.3rem;
+    margin-top:auto;
+    margin-bottom:auto;
+  }
+  .search {
+    font-size: 1rem;
+  }
+}
+  
