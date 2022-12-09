@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { db } from "./Firebase";
 import { ref, onValue } from "firebase/database";
+import { TailSpin } from "react-loader-spinner"
 import Search from "./Search";
 
 function Getter({active}) {
@@ -26,7 +27,6 @@ function Getter({active}) {
 
     function filter(list) {
         let params = active;
-        console.log(params)
 
         if(params === "elders") {
             return list.filter(person => person.gender === "M");;
@@ -44,7 +44,18 @@ function Getter({active}) {
     if(isLoading) {
         return (
             <>
-                <h1 className="text-center">Loading...</h1>
+                <div className="loading-indicator">
+                <TailSpin
+                    height="80"
+                    width="80"
+                    color="#a3a3a3"
+                    ariaLabel="tail-spin-loading"
+                    radius="1"
+                    wrapperStyle={{}}
+                    wrapperClass=""
+                    visible={true}
+/>
+                </div>
             </>
         );
     } else {

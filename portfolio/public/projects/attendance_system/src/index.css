@@ -76,6 +76,14 @@ tr:hover {
   border-right: 1px solid #ffffff;
   margin-right:5px;
 }
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 2rem;
+  color: #ffffff;
+}
 
 @media screen and (min-width:1200px) {
   .container-fluid {
