@@ -3,10 +3,12 @@ import { db } from "./Firebase";
 import { ref, onValue } from "firebase/database";
 import { TailSpin } from "react-loader-spinner"
 import Search from "./Search";
+import Admin from "./Admin";
 
 function Getter({active}) {
     const [list, setList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+
 
     function filterAlphebetically(list) {
         return list.sort((a, b) => {
@@ -34,7 +36,6 @@ function Getter({active}) {
 
     function filter(list) {
         let params = active;
-        console.log(list)
         if(params === "elders") {
             return list.filter(person => person.gender === "M");;
         }
@@ -62,6 +63,11 @@ function Getter({active}) {
                 </div>
             </>
         );
+    } else if(active === "admin")  {
+        return (
+            <Admin list={list} />
+        )
+        
     } else {
         return (
             <>

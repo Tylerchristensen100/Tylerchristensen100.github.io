@@ -1,6 +1,4 @@
 
-//Fix navbar brand to go home instead of unknown file path
-
 function Navbar({active, setActive}) {
   
     return (
