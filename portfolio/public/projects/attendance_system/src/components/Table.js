@@ -65,11 +65,14 @@ function Table({list, origAttendance}) {
 
     function getDateList() {
         decideDates();
-        const dateMonthTranslation = {"0": "Jan", "1": "Feb", "2": "Mar", "3": "Apr", "4": "May", "5": "Jun", "6": "Jul", "7": "Aug", "8": "Sep", "9": "Oct", "10": "Nov", "11": "Dec"}
+        function translate(date) {
+            const dateMonthTranslation = {"0": "Jan", "1": "Feb", "2": "Mar", "3": "Apr", "4": "May", "5": "Jun", "6": "Jul", "7": "Aug", "8": "Sep", "9": "Oct", "10": "Nov", "11": "Dec"}
+            return dateMonthTranslation[date.getMonth()];
+        }
        
         return (
             <>
-                {dates.map((date) => <span className="dateLabel">{String(dateMonthTranslation[date.getMonth()] + " " +  date.getDate())}</span>)}
+                {dates.map((date) => <span className="dateLabel">{String(translate(date) + " " +  date.getDate())}</span>)}
             </>  
         )
     }

@@ -8,12 +8,20 @@ function Getter({active}) {
     const [list, setList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
+    function filterAlphebetically(list) {
+        return list.sort((a, b) => {
+            if(a.last_name < b.last_name) { return -1; }
+            if(a.last_name > b.last_name) { return 1; }
+            return 0;
+        })
+    }
+
     useEffect(() => {
         const getData = async () => {
             const query = ref(db, "/1leH85GY7zRQtyYVxRxjJANahPw6MjnEASokm1VRQZ-k/Sheet1"); 
             return onValue(query, (snapshot) => {
                 const data = snapshot.val();
-                setList(data)
+                setList(filterAlphebetically(data))
                 setIsLoading(false);
             });
         }
@@ -24,10 +32,9 @@ function Getter({active}) {
         }         
     },[]);
 
-
     function filter(list) {
         let params = active;
-
+        console.log(list)
         if(params === "elders") {
             return list.filter(person => person.gender === "M");;
         }
@@ -37,9 +44,6 @@ function Getter({active}) {
             return list;
         }
     }
-
-
-
 
     if(isLoading) {
         return (

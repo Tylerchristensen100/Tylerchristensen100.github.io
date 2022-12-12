@@ -12,7 +12,6 @@ function Search({list}) {
             person.last_name.toLowerCase().includes(searchField.toLowerCase())
         )
     })
-
     const handleChange = e => {
         setSearchField(e.target.value);
     }
