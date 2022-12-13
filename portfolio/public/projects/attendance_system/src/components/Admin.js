@@ -1,13 +1,13 @@
 import { db } from "./Firebase";
-import { ref, push, set  } from 'firebase/database';
+import { ref, set  } from 'firebase/database';
 
 function Admin({list}) {
     const origList = list;
-    console.log(origList)
 
     const Push = (newPerson) => {
-        console.log(push(ref(db, `/1leH85GY7zRQtyYVxRxjJANahPw6MjnEASokm1VRQZ-k/Sheet1/`)), newPerson);
-        // console.log(set(ref(db, `/1leH85GY7zRQtyYVxRxjJANahPw6MjnEASokm1VRQZ-k/Sheet1/${newPerson.id}/`, newPerson)));
+        let refrence = ref(db, `/1leH85GY7zRQtyYVxRxjJANahPw6MjnEASokm1VRQZ-k/Sheet1/${newPerson.id}`)
+        set(refrence, newPerson)
+        alert(`${newPerson.first_name} is added!`)
     }
 
     function handleSubmit(e) {
@@ -29,7 +29,6 @@ function Admin({list}) {
             gender: gender,
             Attendance: newAttendance
         }
-        console.log(newperson)
         Push(newperson)
     }
 
@@ -39,36 +38,36 @@ function Admin({list}) {
             <h1>Admin Portal</h1>
             <div className=" pt-4">
                 <form onSubmit={handleSubmit}>
-                <div class="form-group row">
-                    <label for="firstName" class="col-sm-2 col-form-label">First Name: </label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="firstName" placeholder="Joe" />
+                <div className="form-group row">
+                    <label htmlFor="firstName" className="col-sm-2 col-form-label">First Name: </label>
+                    <div className="col-sm-10">
+                        <input type="text" className="form-control" id="firstName" placeholder="Joe" />
                     </div>
                 </div>
-                <div class="form-group row pt-1">
-                    <label for="lastName" class="col-sm-2 col-form-label">last Name: </label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="lastName" placeholder="Schmoe"  />
+                <div className="form-group row pt-1">
+                    <label htmlFor="lastName" className="col-sm-2 col-form-label">last Name: </label>
+                    <div className="col-sm-10">
+                        <input type="text" className="form-control" id="lastName" placeholder="Schmoe"  />
                     </div>
                 </div>
-                <fieldset class="form-group pt-1">
-                    <div class="row">
-                        <legend class="col-form-label col-sm-2 pt-0">Gender: </legend>
-                        <div class="col-sm-10">
-                            <div class="form-check">
-                                <input class="form-check-input radio" type="radio" name="gridRadios" id="gridRadios1" value="M" />
-                                <label class="form-check-label" for="gridRadios1">Male</label>
+                <fieldset className="form-group pt-1">
+                    <div className="row">
+                        <legend className="col-form-label col-sm-2 pt-0">Gender: </legend>
+                        <div className="col-sm-10">
+                            <div className="form-check">
+                                <input className="form-check-input radio" type="radio" name="gridRadios" id="gridRadios1" value="M" />
+                                <label className="form-check-label" htmlFor="gridRadios1">Male</label>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input radio" type="radio" name="gridRadios" id="gridRadios2" value="F" />
-                                <label class="form-check-label" for="gridRadios2">Female</label>
+                            <div className="form-check">
+                                <input className="form-check-input radio" type="radio" name="gridRadios" id="gridRadios2" value="F" />
+                                <label className="form-check-label" htmlFor="gridRadios2">Female</label>
                             </div>
                         </div>
                     </div>
                 </fieldset>
-                <div class="form-group row pt-1">
-                 <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                <div className="form-group row pt-1">
+                 <div className="col-sm-10">
+                    <button type="submit" className="btn btn-primary">Submit</button>
                 </div>
                 </div>
                 </form>
