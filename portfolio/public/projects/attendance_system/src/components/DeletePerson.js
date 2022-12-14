@@ -21,14 +21,12 @@ function DeletePerson({list}) {
         for(let i = 0; i < cleanedList.length; i++) {
             cleanedList[i].id = i;
         }
-        console.log("cleaned List")
-        console.log(cleanedList)
+       
 
         deleteFromFirebase(cleanedList)
     }
 
     function getPerson(id)  {
-        console.log(list[id])
         deleteRecord(id)
     }
 

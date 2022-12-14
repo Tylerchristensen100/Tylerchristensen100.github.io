@@ -29,7 +29,7 @@ function Export({list}) {
         downloadAnchorNode.setAttribute("download", "data.csv");
         document.body.appendChild(downloadAnchorNode); // required for firefox
         downloadAnchorNode.click();
-        // downloadAnchorNode.remove();
+        downloadAnchorNode.remove();
     }
     
 
