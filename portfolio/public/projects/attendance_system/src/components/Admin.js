@@ -3,6 +3,7 @@ import { useState } from "react";
 import { db, auth, signInWithEmailAndPassword } from "./Firebase";
 import NewPerson from "./NewPerson";
 import DeletePerson from "./DeletePerson";
+import Export from "./Export";
 
 function Admin({list}) {
     const [isAuth, setIsAuth] = useState(false)
@@ -37,6 +38,9 @@ function Admin({list}) {
         else if(active === "delete") {
             return <DeletePerson list={list} />
         }
+        else if (active === "export") {
+            return <Export list={list} />
+        }
     }
    
 
@@ -51,6 +55,9 @@ function Admin({list}) {
                     </li>
                     <li className="nav-item">
                       <button className={active === "delete" ?  "active nav-link" : 'nav-link'}  onClick={() => setActive("delete")} >Delete Person</button>
+                    </li>
+                    <li className="nav-item">
+                      <button className={active === "export" ?  "active nav-link" : 'nav-link'} aria-current="page" onClick={ () => setActive("export")} >Export</button>
                     </li>
                 </ul>
                 <div className="tab-content">
