@@ -35,10 +35,12 @@ function Export({list}) {
 
     return(
         <>
+        <div className="pt-4">
             <h3>Export</h3>
             <button onClick={() => exportJSON()} className="btn btn-primary mt-3">Export JSON</button>
             <br />
             <button onClick={() => exportCSV()} className="btn btn-primary mt-3">Export CSV</button>
+            </div>
         </>
     );
 }

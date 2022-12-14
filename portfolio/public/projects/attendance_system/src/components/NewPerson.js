@@ -37,7 +37,7 @@ function NewPerson({list}) {
     }
 
     return(
-        <div className=" pt-4">
+        <div className="pt-4">
         <form onSubmit={handleSubmit}>
         <div className="form-group row">
             <label htmlFor="firstName" className="col-sm-2 col-form-label">First Name: </label>
