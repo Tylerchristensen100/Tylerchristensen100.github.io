@@ -1,79 +1,92 @@
-import { db } from "./Firebase";
-import { ref, set  } from 'firebase/database';
+import { set } from "firebase/database";
+import { useState } from "react";
+import { db, auth, signInWithEmailAndPassword } from "./Firebase";
+import NewPerson from "./NewPerson";
+import DeletePerson from "./DeletePerson";
 
 function Admin({list}) {
-    const origList = list;
+    const [isAuth, setIsAuth] = useState(false)
+    const [active, setActive] = useState("new")
 
-    const Push = (newPerson) => {
-        let refrence = ref(db, `/1leH85GY7zRQtyYVxRxjJANahPw6MjnEASokm1VRQZ-k/Sheet1/${newPerson.id}`)
-        set(refrence, newPerson)
-        alert(`${newPerson.first_name} is added!`)
-    }
-
-    function handleSubmit(e) {
+    function handleAuthentication(e) {
         e.preventDefault();
-        let firstName = document.getElementById("firstName").value;
-        let lastName = document.getElementById("lastName").value;
-        let gender = document.querySelector(".radio:checked").value;
-        
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
 
-        let datesList = Object.keys(origList[0].Attendance);
-        let newAttendance = {};
-        for(let i = 0; i < datesList.length; i++) {
-            newAttendance[datesList[i]] = false;
-        }
-        let newperson = {
-            id: origList.length,
-            first_name: firstName,
-            last_name: lastName,
-            gender: gender,
-            Attendance: newAttendance
-        }
-        Push(newperson)
+        signInWithEmailAndPassword(auth, email , password).then( (userCredential) => {
+            const user = userCredential.user;
+            console.log(user)
+            setIsAuth(true)
+        }).catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorMessage)
+            alert("You are not authorized to access this page")
+            console.log(errorCode)
+
+            document.getElementById("email").value = "";
+            document.getElementById("password").value = "";
+
+        })
     }
 
-    return (
-        <>
-        <div>
-            <h1>Admin Portal</h1>
-            <div className=" pt-4">
-                <form onSubmit={handleSubmit}>
-                <div className="form-group row">
-                    <label htmlFor="firstName" className="col-sm-2 col-form-label">First Name: </label>
-                    <div className="col-sm-10">
-                        <input type="text" className="form-control" id="firstName" placeholder="Joe" />
-                    </div>
+    function displaycomponent() {
+        if(active === "new") {
+            return <NewPerson list={list} />
+        }
+        else if(active === "delete") {
+            return <DeletePerson list={list} />
+        }
+    }
+   
+
+    if(isAuth) {
+        return (
+            <>
+            <div>
+                <h1>Admin Portal</h1>
+                <ul className="nav nav-tabs pt-3">
+                    <li className="nav-item">
+                      <button className={active === "new" ?  "active nav-link" : 'nav-link'} aria-current="page" onClick={ () => setActive("new")} >New Person</button>
+                    </li>
+                    <li className="nav-item">
+                      <button className={active === "delete" ?  "active nav-link" : 'nav-link'}  onClick={() => setActive("delete")} >Delete Person</button>
+                    </li>
+                </ul>
+                <div className="tab-content">
+                    {displaycomponent()}
                 </div>
-                <div className="form-group row pt-1">
-                    <label htmlFor="lastName" className="col-sm-2 col-form-label">last Name: </label>
-                    <div className="col-sm-10">
-                        <input type="text" className="form-control" id="lastName" placeholder="Schmoe"  />
-                    </div>
-                </div>
-                <fieldset className="form-group pt-1">
-                    <div className="row">
-                        <legend className="col-form-label col-sm-2 pt-0">Gender: </legend>
+
+                
+            </div>
+            </>
+        );
+    }
+    else {
+        return (
+            <>
+            <form onSubmit={handleAuthentication}>
+                    <div className="form-group row">
+                        <label htmlFor="email" className="col-sm-2 col-form-label">First Name: </label>
                         <div className="col-sm-10">
-                            <div className="form-check">
-                                <input className="form-check-input radio" type="radio" name="gridRadios" id="gridRadios1" value="M" />
-                                <label className="form-check-label" htmlFor="gridRadios1">Male</label>
-                            </div>
-                            <div className="form-check">
-                                <input className="form-check-input radio" type="radio" name="gridRadios" id="gridRadios2" value="F" />
-                                <label className="form-check-label" htmlFor="gridRadios2">Female</label>
-                            </div>
+                            <input type="email" className="form-control" id="email" placeholder="Joe@example.com" autocomplete="username" />
                         </div>
                     </div>
-                </fieldset>
-                <div className="form-group row pt-1">
-                 <div className="col-sm-10">
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                </div>
-                </div>
-                </form>
-            </div>
-        </div>
-        </>
-    );
+                    <div className="form-group row pt-1">
+                        <label htmlFor="Password" className="col-sm-2 col-form-label">last Name: </label>
+                        <div className="col-sm-10">
+                            <input type="password" className="form-control" id="password" placeholder="******" autocomplete="current-password" />
+                        </div>
+                    </div>
+                    <div className="form-group row pt-1">
+                     <div className="col-sm-10">
+                        <button type="submit" className="btn btn-primary">Submit</button>
+                    </div>
+                    </div>
+            </form>
+                        
+            </>
+        )
+    }
 }
 export default Admin;
