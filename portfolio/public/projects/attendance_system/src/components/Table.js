@@ -15,6 +15,8 @@ function Table({list, origAttendance}) {
     function decideDates() {
         let rawDates = Object.keys(origAttendance)
         let today = new Date();
+        // "December 25, 2022 05:35:32"
+        console.log(today)
         let dateList = rawDates.map((date) => getDateObject(date));
         dateList.push(today);
         dateList.sort((date1, date2) => date1 - date2);
@@ -22,26 +24,40 @@ function Table({list, origAttendance}) {
 
         //if current day is sunday then display today
         if (today.getDay() === 0) {
-            dates.push(dateList[index - 2])
-            dates.push(dateList[index-1])
-            dates.push(dateList[index])
-            dates.push(dateList[index+2])
-            dates.push(dateList[index + 3]);
-            dates.push(dateList[index + 4]);
-            dates.splice(dates.indexOf(today),1)
-
+            console.log("today is sunday")
+            // dates.push(dateList[index - 2])
+            // dates.push(dateList[index- 1])
+            // dates.push(dateList[index])
+            // dates.push(dateList[index + 1])
+            // dates.push(dateList[index + 2]);
+            // dates.push(dateList[index + 3]);
+            dates.push(dateList[index -5])
+            dates.push(dateList[index- 4])
+            dates.push(dateList[index-3])
+            dates.push(dateList[index -2])
+            dates.push(dateList[index-1]);
+            dates.push(dateList[index]);
+            dates.splice(dates.indexOf(today), 1)
         }
         // if current day is not sunday then don't display today...display next sunday
         if(today.getDay() !== 0){
-            dates.push(dateList[index - 2])
-            dates.push(dateList[index-1])
-            dates.push(dateList[index+1])
-            dates.push(dateList[index + 2]);
-            dates.push(dateList[index + 3]);
-            dates.push(dateList[index + 4]);
-            dates.splice(dates.indexOf(today),1)
+            // dates.push(dateList[index - 2])
+            // dates.push(dateList[index - 1])
+            // dates.push(dateList[index + 1])
+            // dates.push(dateList[index + 2]);
+            // dates.push(dateList[index + 3]);
+            // dates.push(dateList[index + 4]);
+            dates.push(dateList[index -4])
+            dates.push(dateList[index- 3])
+            dates.push(dateList[index-2])
+            dates.push(dateList[index -1])
+            dates.push(dateList[index+1]);
+            dates.push(dateList[index+2]);
+            dates.splice(dates.indexOf(today), 1)
 
         }
+        console.log("dates displayed")
+        console.log(dates)
 
         //convert all the dates to the string format that they are stored in the database for easy comparison
         dates.forEach((date) => {
