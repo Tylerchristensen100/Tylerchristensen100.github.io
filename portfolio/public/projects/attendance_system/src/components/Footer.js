@@ -7,8 +7,8 @@ return (
             <p className="center">Not listed here?</p>
             <a className="center text-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdcUbOCzlDQ59yrPCBjkAKnNVQmtrG-64egqKIcWRmIt8CdkQ/viewform?usp=sf_link" title="Fill out this form to let me know your in the YSA 17th ward" target="_blank">Let me know!</a>
         
-            <a className="center text-primary pt-1" href="https://docs.google.com/forms/d/e/1FAIpQLSeAW-GdYUW_Po2i0wOpqXl3t7jESzmtkUsDXsYktduJfIKscA/viewform" title="Fill out this form to let me know your in the YSA 17th ward" target="_blank">Suggest A Feature</a>
-        
+            <a className="center text-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeAW-GdYUW_Po2i0wOpqXl3t7jESzmtkUsDXsYktduJfIKscA/viewform" title="Fill out this form to let me know your in the YSA 17th ward" target="_blank">Suggest a Feature</a>
+
         </div>
         
 
