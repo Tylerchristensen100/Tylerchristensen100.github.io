@@ -96,6 +96,10 @@ tr:hover {
     overflow-x:scroll;
     width:auto;
   }
+  .table-head {
+    position:sticky;
+    top:0;
+  }
   .name {
     font-size: 1.5rem;
     min-width:100px;
