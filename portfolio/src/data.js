@@ -4,7 +4,7 @@ export const projects = [
         title: "Attendance System",
         subtitle: "A easy way to take attendance for a given event",
         description: "A Full stack app using Reactjs and Firebase",
-        image: "./img/projects/resume.png",
+        image: "./img/projects/attendanceSystem.png",
         link: "https://attendance-2813f.web.app/",
     },{
         title: "Spiritual Streak",
