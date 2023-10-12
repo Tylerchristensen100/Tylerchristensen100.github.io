@@ -1,4 +1,12 @@
-export const projects = [{
+export const projects = [
+        
+{
+        title: "Attendance System",
+        subtitle: "A easy way to take attendance for a given event",
+        description: "A Full stack app using Reactjs and Firebase",
+        image: "./img/projects/resume.png",
+        link: "https://attendance-2813f.web.app/",
+    },{
         title: "Spiritual Streak",
         subtitle: "Simple Flutter App",
         description: "A counter that tracks history, and saves it to firebase and local storage (SharedPreferences in flutter)",
@@ -30,4 +38,4 @@ export const projects = [{
     },
 ];
 
-export const skills = ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "React", "Flutter", "Dart", "Python", "C++"];
+export const skills = ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "React", "Flutter", "Dart", "Python","C#", "C++"];
