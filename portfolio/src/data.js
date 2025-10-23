@@ -1,41 +1,56 @@
 export const projects = [
-        
-{
-        title: "Attendance System",
-        subtitle: "A easy way to take attendance for a given event",
-        description: "A Full stack app using Reactjs and Firebase",
-        image: "./img/projects/attendanceSystem.png",
-        link: "https://attendance-2813f.web.app/",
-    },{
-        title: "Spiritual Streak",
-        subtitle: "Simple Flutter App",
-        description: "A counter that tracks history, and saves it to firebase and local storage (SharedPreferences in flutter)",
-        image: "./img/projects/spiritualStreak.png",
-        link: "https://62bc6e51a237c9164111ecd0--subtle-naiad-e13f25.netlify.app/",
-
-    },
-    {
-        title: "Chesterfield Associates",
-        subtitle: "HTML, CSS, and Bootstrap",
-        description: "A fast and responsive website for a international agriculture company",
-        image: "./img/projects/chesterfield.png",
-        link: "http://chesterfieldassociates.net/",
-
-    },
-    {
-        title: "Frost Point",
-        subtitle: "Calculate the frost point of a given area",
-        description: "Querys the Open Weather API to get the current weather and calculates the frost point of a given area.",
-        image: "./img/projects/frostPoint.png",
-        link: "./projects/frostPoint/",
-    },
-    {
-        title: "Resume",
-        subtitle: "Resume using Bootstrap and jQuery",
-        description: "A responsive resume using Bootstrap and jQuery",
-        image: "./img/projects/resume.png",
-        link: "./projects/Resume/",
-    },
+  {
+    title: "Program Catalog",
+    subtitle: "A simple University Program Catalog",
+    description:
+      "A Full stack SSR app using Golang and Golang templates, with HTMX for interactivity",
+    image: "./img/projects/catalog.png",
+    link: "https://capstone.freethegnomes.org/",
+  },
+  {
+    title: "CSV API",
+    subtitle:
+      "An API to effortlessly convert data from any CSV file into a JSON format, with powerful options for sorting and filtering.",
+    description:
+      "A Restful API built with Golang and http.ServeMux that converts CSV data to JSON format.",
+    image: "./img/projects/csv_api.png",
+    link: "https://github.com/Tylerchristensen100/CSV_API?tab=readme-ov-file#getting-started",
+  },
+  {
+    title: "Attendance System",
+    subtitle: "A easy way to take attendance for a given event",
+    description: "A Full stack app using Reactjs and Firebase",
+    image: "./img/projects/attendanceSystem.png",
+    link: "https://attendance-2813f.web.app/",
+  },
+  {
+    title: "Chesterfield Associates",
+    subtitle: "HTML, CSS, and Bootstrap",
+    description:
+      "A fast and responsive website for a international agriculture company",
+    image: "./img/projects/chesterfield.png",
+    link: "http://chesterfieldassociates.net/",
+  },
 ];
 
-export const skills = ["HTML", "CSS", "Bootstrap", "JavaScript", "jQuery", "React", "Flutter", "Dart", "Python","C#", "C++"];
+export const skills = [
+    "ReactJS",
+    "VueJS",
+    "TypeScript",
+    "JavaScript",
+    "Flutter",
+    "Dart",
+    "Golang",
+    "Python",
+    "C#",
+    "SQL",
+    "HTML",
+    "CSS",
+    "TailwindCSS",
+    "Bootstrap",
+    "Docker",
+    "Kubernetes",
+    "Helm",
+    "Git",
+
+];

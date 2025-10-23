@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "./index.css";
 import { useState, useEffect } from "react";
@@ -7,8 +6,8 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
-import Navbar from "./components/Navbar";
-import SideBar from "./components/SideBar";
+import Navbar from "./components/nav/Navbar";
+import SideBar from "./components/nav/SideBar";
 
 function App() {
   const [isDesktop, setDesktop] = useState(window.innerWidth > 1450);

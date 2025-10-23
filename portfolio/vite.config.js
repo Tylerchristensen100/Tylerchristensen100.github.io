@@ -1,17 +1,21 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react({
-    babel: {
-      plugins: [['babel-plugin-react-compiler', {}]],
-    },
-  }),],
+  plugins: [
+    react({
+      babel: {
+        plugins: [["babel-plugin-react-compiler", {}]],
+      },
+    }),
+    tailwindcss(),
+  ],
 
   build: {
     sourcemap: true,
-    outDir: 'build',
+    outDir: "build",
     cssMinify: true,
-  }
-})
+  },
+});

@@ -7,12 +7,18 @@ function About() {
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-black dark:text-white">
             Tyler Christensen
-            <br className="hidden lg:inline-block dark:text-white" />
-            Front-end Web Developer
+            <br className="hidden lg:inline-block" />
+            <br className="hidden lg:inline-block" />
+            Full Stack Developer
           </h1>
           <p className="mb-8 leading-relaxed dark:text-white">
-            I am a passionate web and app developer with a passion for building
-            responive, user focused applications.
+            I am a Full-stack web & app developer with a passion for building
+            user-friendly web applications that solve real-world problems.
+            Proven ability to learn new technologies quickly and apply them to
+            real-world projects. Experience with HTML, CSS, JS, TS, React, Vue,
+            Flutter, and Dart, Go, Python. Expertise in building both front-end
+            and Full-stack applications, as well as web and mobile apps with
+            Flutter & Kotlin.
           </p>
           <div className="flex justify-center">
             <a
@@ -33,6 +39,7 @@ function About() {
               href="https://github.com/Tylerchristensen100"
               title="github"
               className="block w-40"
+              target="_blank"
             >
               <BsGithub className="mx-auto inline-block w-20 mb-4" size={50} />
             </a>
@@ -40,6 +47,7 @@ function About() {
               href="https://www.linkedin.com/in/tyler-c-83900b11b/"
               title="linkedin"
               className="block w-40"
+              target="_blank"
             >
               <BsLinkedin
                 className="mx-auto inline-block w-20 mb-4"
@@ -47,13 +55,6 @@ function About() {
               />
             </a>
           </div>
-        </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          <img
-            className="object-cover object-center rounded"
-            alt="hero"
-            src="./img/me.jpg"
-          />
         </div>
       </div>
     </section>
